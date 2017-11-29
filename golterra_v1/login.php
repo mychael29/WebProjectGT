@@ -86,7 +86,7 @@
 <div class="container">
  
 	
-	<form class="form-signin" method="post" action="sesion_login.php">
+	<form class="form-signin" method="post" action="login.php">
 
 		<?php include('errors.php'); ?> 
 
