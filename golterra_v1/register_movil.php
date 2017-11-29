@@ -102,5 +102,7 @@ require_once($server . "/modelo/conectar.php");
 			echo json_encode("debe escribir ambas entradas");
 		}
 		
+	}else{
+		echo "funciona";
 	}
 ?>
