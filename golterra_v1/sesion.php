@@ -7,7 +7,7 @@ session_start();
 	$errors = array(); 
 	$_SESSION['success'] = "";
 
-require_once($server . "/modelo/conectar.php");
+    require_once($server . "/modelo/conectar.php");
 	
 	class LoginUser {
 		
@@ -33,7 +33,7 @@ require_once($server . "/modelo/conectar.php");
 				$username = $row;
 				$_SESSION['username'] = $username; //CAMBIAR USERNAME POR EMAIL
 				
-				header('location: index.php');
+				header('location: https://arcane-ravine-59770.herokuapp.com/index.php');
 
 				//echo json_encode($json);
 				//mysqli_close($this -> conexion);
@@ -70,7 +70,7 @@ require_once($server . "/modelo/conectar.php");
 				//mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
 			}else{
 				//registro
-                $query = "insert into usuarios (username,email, password) values (?,?,?)";
+                $query = "insert into usuarios (username,email,password) values (?,?,?)";
 				$inserted = $this->conexion->prepare($query);
 				
 				//$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
@@ -84,7 +84,7 @@ require_once($server . "/modelo/conectar.php");
 					//$json['success'] = 'Cuenta creada';
 					$_SESSION['username'] = $username;
 					
-					header('location: index.php');
+					header('location: https://arcane-ravine-59770.herokuapp.com/index.php');
 				
 				}else{
 					$json['error'] = 'Se produjo un error';
@@ -99,8 +99,10 @@ require_once($server . "/modelo/conectar.php");
 	}
 	
 	
-	$loginUser = new LoginUser();
+	
 	if(isset($_POST['login_user'])){
+		$loginUser = new LoginUser();
+
 		$email = $_POST["email"];
 		$password = $_POST['password'];
 
@@ -112,15 +114,8 @@ require_once($server . "/modelo/conectar.php");
 		}
 
 		if (count($errors) == 0){
-			if(!empty($email) && !empty($password)){
-				
-				$encrypted_password = md5($password);
-				$loginUser-> does_user_exist($email,$password);
-				
-				
-			}else{
-				echo json_encode("debe escribir ambas entradas");
-			}
+			$encrypted_password = md5($password);
+			$loginUser-> does_user_exist($email,$password);
 		}
 
 
@@ -143,10 +138,10 @@ require_once($server . "/modelo/conectar.php");
 	}
 	*/
 
-	$signupUser = new SignupUser();
+	
 	// Registrar usuario
 	if (isset($_POST['reg_user'])) {
-		
+		$signupUser = new SignupUser();
 				$username = $_POST['username'];
 				$email = $_POST['email'];
 				$password_1 = $_POST['password_1'];
