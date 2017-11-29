@@ -130,8 +130,8 @@
 		    <?php endif ?>
 
         <?php  if (!isset($_SESSION['username'])) : ?>
-        <li><a href='login.php'>Iniciar sesión</a></li>
-        <li><a href='register.php'>Registrarse</a></li>
+        <li><a href="login.php">Iniciar sesión</a></li>
+        <li><a href="register.php">Registrarse</a></li>
 		    <?php endif ?>
         </ul>
       </li>

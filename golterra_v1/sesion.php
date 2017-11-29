@@ -7,7 +7,7 @@ session_start();
 	$errors = array(); 
 	$_SESSION['success'] = "";
 
-$server . "/modelo/conectar.php";
+require_once($server . "/modelo/conectar.php");
 	
 	class LoginUser {
 		
@@ -170,12 +170,13 @@ $server . "/modelo/conectar.php";
 		
 			}
 
-
+			/*
 			if (isset($_GET['logout'])) {
 				session_destroy();
 				unset($_SESSION['username']);
 				header("location: index.php");
-		  }
-	
+		  }*/	
+
+
 ?>
 
