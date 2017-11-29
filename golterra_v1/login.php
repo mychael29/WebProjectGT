@@ -87,10 +87,10 @@
 	
 	<form class="form-signin" method="post" action="login.php">
 
-		<?php include('errors.php'); ?>
+		<?php include('errors.php'); ?> // ¿?
 
 		<h2 class="form-signin-heading">Login</h2>
-        <input type="text" class="form-control" name="username" placeholder="Username" required autofocus />
+        <input type="text" class="form-control" name="email" placeholder="email" required autofocus />
 		<input type="password" class="form-control" name="password" placeholder="Password" required=""/>    
 		<label class="checkbox">
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Recuérdame
