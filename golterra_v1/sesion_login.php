@@ -26,7 +26,7 @@ class LoginUser {
             $username = $row;
             $_SESSION['username'] = $username; //CAMBIAR USERNAME POR EMAIL
             
-            header('location: ' . $server .'/index.php');
+            header('location: https://arcane-ravine-59770.herokuapp.com/index.php');
 
             //echo json_encode($json);
             //mysqli_close($this -> conexion);
@@ -39,7 +39,7 @@ class LoginUser {
     
 }
 $loginUser = new LoginUser();
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if(isset($_POST['login_user'])){ // ya se cambio, averiguar mejor, buscar ejemplos
     
 
     $email = $_POST["email"];
@@ -52,7 +52,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         array_push($errors, "Password is required");
     }
 
-    if (count($errors) == 0){
+    if (count($errors) == 0){ /// posible erro aqui
         $encrypted_password = md5($password);
         $loginUser-> does_user_exist($email,$password);
     }

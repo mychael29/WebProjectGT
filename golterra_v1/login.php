@@ -86,7 +86,7 @@
 <div class="container">
  
 	
-	<form class="form-signin" method="post" action="login.php">
+	<form class="form-signin" method="post" action="sesion_login.php">
 
 		<?php include('errors.php'); ?> 
 
@@ -97,7 +97,7 @@
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Recuérdame
 		</label>
 		
-		<button class="btn btn-lg btn-primary btn-block" name="submit" type="submit">Login</button> 
+		<button class="btn btn-lg btn-primary btn-block" name="login_user" type="submit">Login</button> 
 		
 		<p>
     No eres miembro? <a href="register.php">Registrate</a>
