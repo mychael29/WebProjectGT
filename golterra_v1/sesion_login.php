@@ -26,7 +26,7 @@ class LoginUser {
             $username = $row;
             $_SESSION['username'] = $username; //CAMBIAR USERNAME POR EMAIL
             
-            header('location: https://arcane-ravine-59770.herokuapp.com/index.php');
+            header('location: ' . $server .'/index.php');
 
             //echo json_encode($json);
             //mysqli_close($this -> conexion);
@@ -38,9 +38,9 @@ class LoginUser {
     }
     
 }
-
+$loginUser = new LoginUser();
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $loginUser = new LoginUser();
+    
 
     $email = $_POST["email"];
     $password = $_POST['password'];
