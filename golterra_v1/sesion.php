@@ -1,5 +1,5 @@
 <?php
-require_once("modelo/conectar.php");
+
 session_start();
 
 	$username = "";
@@ -7,7 +7,7 @@ session_start();
 	$errors = array(); 
 	$_SESSION['success'] = "";
 
-
+require_once("modelo/conectar.php");
 	
 	class LoginUser {
 		
@@ -169,6 +169,13 @@ session_start();
 				}
 		
 			}
+
+
+			if (isset($_GET['logout'])) {
+				session_destroy();
+				unset($_SESSION['username']);
+				header("location: index.php");
+		  }
 	
 ?>
 
