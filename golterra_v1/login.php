@@ -88,7 +88,7 @@
 	
 	<form class="form-signin" method="post" action="login.php">
 
-		<?php include('errors.php'); ?> // ¿?
+		<?php include('errors.php'); ?> 
 
 		<h2 class="form-signin-heading">Login</h2>
         <input type="text" class="form-control" name="email" placeholder="email" required autofocus />
@@ -97,7 +97,7 @@
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Recuérdame
 		</label>
 		
-		<button class="btn btn-lg btn-primary btn-block" name="login_user" type="submit">Login</button> 
+		<button class="btn btn-lg btn-primary btn-block" name="submit" type="submit">Login</button> 
 		
 		<p>
     No eres miembro? <a href="register.php">Registrate</a>
