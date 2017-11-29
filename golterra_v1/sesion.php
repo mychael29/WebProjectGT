@@ -7,7 +7,7 @@ session_start();
 	$errors = array(); 
 	$_SESSION['success'] = "";
 
-require_once($server . "/modelo/conectar.php");
+$server . "/modelo/conectar.php";
 	
 	class LoginUser {
 		
