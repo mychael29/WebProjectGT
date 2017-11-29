@@ -1,7 +1,7 @@
 <?php
 
-require_once($server . "/../modelo/conectar.php");
-	
+//require_once($server . "/../modelo/conectar.php");
+require_once("../" . $server . "/modelo/conectar.php");	
 	class LoginUser {
 		
 		private $db;
