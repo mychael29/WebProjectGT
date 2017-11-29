@@ -52,8 +52,6 @@ if(isset($_POST['login_user'])){ // ya se cambio, averiguar mejor, buscar ejempl
         array_push($errors, "Password is required");
     }
 
-    $encrypted_password = md5($password);
-    $loginUser-> does_user_exist($email,$password);
     if (count($errors) == 0){ /// posible erro aqui
         $encrypted_password = md5($password);
         $loginUser-> does_user_exist($email,$password);

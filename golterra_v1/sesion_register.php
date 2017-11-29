@@ -53,10 +53,10 @@ class SignupUser {
     }
     
 }
-
+$signupUser = new SignupUser();
 // Registrar usuario
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $signupUser = new SignupUser();
+if (isset($_POST['reg_user'])) {
+    
             $username = $_POST['username'];
             $email = $_POST['email'];
             $password_1 = $_POST['password_1'];
@@ -78,6 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             }
     
-}
+        }
 
 ?>
