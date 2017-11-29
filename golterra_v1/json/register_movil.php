@@ -1,6 +1,6 @@
 <?php
 
-require_once("../modelo/conectar.php");
+require_once($server . "/../modelo/conectar.php");
 	
 	class SignupUser {
 		
