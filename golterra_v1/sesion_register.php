@@ -23,7 +23,7 @@ class SignupUser {
         if($result->rowCount() == 1){
           
             $json['error'] = 'Ya existe un usuario con '.$email;
-            echo json_encode($json);
+            //echo json_encode($json);
             //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
         }else{
             //registro
@@ -45,7 +45,7 @@ class SignupUser {
             
             }else{
                 $json['error'] = 'Se produjo un error';
-                echo json_encode($json);
+                //echo json_encode($json);
             }
             
             //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui

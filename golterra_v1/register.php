@@ -1,4 +1,4 @@
-<?php include($_SERVER . '/sesion_register.php') ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<?php include($_SERVER . '/sesion_register.php') ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
     <div class="navbar-header">
