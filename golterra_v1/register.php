@@ -84,7 +84,7 @@
 <br>
 <div class="container">
 
- <form class="form-signin" method="post" action="register.php">
+ <form class="form-signin" method="POST" action="register.php">
  <?php include('errors.php'); ?>
   <fieldset>
     <h3 class="form-signin-heading">Registro</h3>
