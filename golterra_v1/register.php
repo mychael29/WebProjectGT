@@ -1,5 +1,5 @@
 <?php 
-require 'sesion_register.php';
+require  $_SERVER . 'sesion_register.php';
 ?>
 <!DOCTYPE html>
 <html>
