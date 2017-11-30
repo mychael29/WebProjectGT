@@ -7,7 +7,7 @@ $email    = "";
 $errors = array(); 
 $_SESSION['success'] = "";
 
-require_once($server . "/modelo/conectar.php");
+require($server . "/modelo/conectar.php");
 
 ?>
 
