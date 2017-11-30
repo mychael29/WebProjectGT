@@ -49,14 +49,13 @@ class SignupUser {
             }
             
             //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
-        }    
-        
-    }
-    
+        }       
+    }    
 }
+
 $signupUser = new SignupUser();
 // Registrar usuario
-if (isset($_POST['reg_user'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
             $username = $_POST['username'];
             $email = $_POST['email'];
