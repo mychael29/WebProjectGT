@@ -1,6 +1,6 @@
 <?php
 
-require_once("sesion.php");
+include("sesion.php");
 //require $server . '/sesion.php';
 
 class SignupUser {
