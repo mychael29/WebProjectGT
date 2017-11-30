@@ -1,4 +1,4 @@
-<?php require($server . '/sesion_register.php') ?>
+<?php include($_SERVER . '/sesion_register.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
