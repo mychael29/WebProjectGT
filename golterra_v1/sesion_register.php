@@ -1,6 +1,6 @@
 <?php
 
-include($_SERVER['HTTP_HOST'] . 'modelo/conectar.php') ;
+include('config.php') ;
 //require $server . '/sesion.php';
 session_start();
 $errors = array(); 
