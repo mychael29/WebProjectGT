@@ -1,8 +1,9 @@
 <?php
 
-include($_SERVER['HTTP_HOST'] . '/sesion.php');
+include($_SERVER['HTTP_HOST'] . 'modelo/conectar.php') ;
 //require $server . '/sesion.php';
-
+session_start();
+$errors = array(); 
 class SignupUser {
     
     private $db;
