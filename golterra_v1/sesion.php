@@ -1,13 +1,13 @@
 <?php
 
-session_start();
+include($_SERVER['HTTP_HOST'] . 'modelo/conectar.php') ;
 
 $username = "";
 $email    = "";
 $errors = array(); 
 $_SESSION['success'] = "";
 
-include($_SERVER['HTTP_HOST'] . 'modelo/conectar.php') ;
+session_start();
 
 ?>
 

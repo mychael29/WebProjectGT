@@ -1,4 +1,4 @@
-
+<?php include($_SERVER['HTTP_HOST'] . '/sesion_register.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-<?php include($_SERVER['HTTP_HOST'] . '/sesion_register.php') ?>
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
     <div class="navbar-header">
@@ -127,7 +127,7 @@
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <button class="btn btn-success" name="reg_user">Registrar</button>
+        <button class="btn btn-success" name="submit" type="submit">Registrar</button><--! reg_user-->
       </div>
 	  </div>
 	
