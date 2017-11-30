@@ -1,5 +1,5 @@
 <?php 
-require 'https://arcane-ravine-59770.herokuapp.com/sesion_register.php';
+require $_SERVER . 'sesion_register.php';
 ?>
 <!DOCTYPE html>
 <html>
