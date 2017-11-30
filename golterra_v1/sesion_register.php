@@ -1,6 +1,6 @@
 <?php
 
-include('config.php') ;
+
 //require $server . '/sesion.php';
 session_start();
 $errors = array(); 
