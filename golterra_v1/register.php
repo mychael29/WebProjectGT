@@ -1,4 +1,4 @@
-<?php include($server . '/sesion_register.php') ?>
+<?php include('sesion_register.php') ?>
 <!DOCTYPE html>
 <html>
 <head>
