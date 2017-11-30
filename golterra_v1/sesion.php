@@ -7,7 +7,7 @@ $email    = "";
 $errors = array(); 
 $_SESSION['success'] = "";
 
-include($_SERVER . 'modelo/conectar.php') ;
+include($_SERVER['HTTP_HOST'] . 'modelo/conectar.php') ;
 
 ?>
 
