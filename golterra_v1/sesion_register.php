@@ -15,7 +15,7 @@ try{
 }
 
 // Registrar usuario
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if (isset($_POST['reg_user'])) {
     
             $username = $_POST['username'];
             $email = $_POST['email'];
