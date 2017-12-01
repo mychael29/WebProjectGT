@@ -1,6 +1,23 @@
 
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyecto MySQL-Android</title>
 
+<!-- Bootstrap -->
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<link href="signin.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<?php
+include("config.php");
 //require $server . '/sesion.php';
 session_start();
 $errors = array(); 
@@ -35,8 +52,6 @@ class SignupUser {
             $inserted->bindParam(1, $username, PDO::PARAM_STR);
             $inserted->bindParam(2, $email, PDO::PARAM_STR); 
             $inserted->bindParam(3, $password, PDO::PARAM_STR);
-            
-        
             
             if($inserted->execute()){
                 //$json['success'] = 'Cuenta creada';
@@ -76,29 +91,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (count($errors) == 0) {
                 $encrypted_password = md5($password);
                 $signupUser-> does_user_exist($email,$password,$username);
-
             }
-    
         }
-
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Proyecto MySQL-Android</title>
-
-<!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.css">
-
-<link href="signin.css" rel="stylesheet">
-
-</head>
-
-<body>
-
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
     <div class="navbar-header">
