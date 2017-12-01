@@ -17,7 +17,7 @@
 <body>
 
 <?php 
-error_reporting(E_ALL);
+
 include('sesion_register.php');
  ?>
 <nav class="navbar navbar-default navbar-fixed-top">
