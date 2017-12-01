@@ -87,7 +87,7 @@ require_once($server . "/../modelo/conectar.php");
 		if($image!="no imagen"){
 			$path  = "image_profile/$nombres.jpg"; 
 			$url_image = "image_profile/".$nombres.".jpg";//agregarle el ID al nombre de la imagen
-			file_put_contents($path,$image);
+			file_put_contents($_SERVER['DOCUMENT_ROOT'].$path,base64_decode($image));
 			//$bytesArchivo=file_get_contents($path);//para guardar la imagen en la tabla de la bbdd
 		}else{
 			$url_image = "sin imagen";
