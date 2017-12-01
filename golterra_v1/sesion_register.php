@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
             // Registrar usuario si no hay errores en el formulario
             if (count($errors) == 0) {
-                
+
                 $encrypted_password = md5($password);
                 $query = "Select * from usuarios where email='$email'";
                 $result = $this -> conexion->prepare($query);
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         //$json['success'] = 'Cuenta creada';
                         $_SESSION['username'] = $username;
                         
-                        header('location: https://arcane-ravine-59770.herokuapp.com/index.php');
+                        header('location: index.php');
                     
                     }else{
                         $json['error'] = 'Se produjo un error';
