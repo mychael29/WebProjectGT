@@ -19,9 +19,9 @@ try{
 		$image = $_POST['photo'];
 		
 		if($image!="no imagen"){
-			$path  = "image_profile/$nombres.jpg"; 
+			$path  = "json/image_profile/$nombres.jpg"; 
 			$url_image = "image_profile/".$nombres.".jpg";//agregarle el ID al nombre de la imagen
-			file_put_contents($_SERVER['DOCUMENT_ROOT'] . $path,base64_decode($image));
+			file_put_contents($path,base64_decode($image));
 			//$bytesArchivo=file_get_contents($path);//para guardar la imagen en la tabla de la bbdd
 		}else{
 			$url_image = "sin imagen";
