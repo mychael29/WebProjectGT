@@ -1,6 +1,6 @@
 <?php
 
-
+include('modelo/conectar.php') ;
 //require $server . '/sesion.php';
 session_start();
 $errors = array(); 
