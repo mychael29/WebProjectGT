@@ -4,6 +4,7 @@ include('config.php') ;
 
 //require $server . '/sesion.php';
 session_start();
+
 $errors = array(); 
 
 try{
@@ -35,7 +36,7 @@ if (isset($_POST['reg_user'])) {
             // Registrar usuario si no hay errores en el formulario
             if (count($errors) == 0) {
 
-                $encrypted_password = md5($password);
+                $encrypted_password = md5($password_1);
                 $query = "Select * from usuarios where email='$email'";
                 $result = $conexion->prepare($query);
                 $result->execute();
@@ -54,7 +55,7 @@ if (isset($_POST['reg_user'])) {
                     //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
                     $inserted->bindParam(1, $username, PDO::PARAM_STR);
                     $inserted->bindParam(2, $email, PDO::PARAM_STR); 
-                    $inserted->bindParam(3, $password, PDO::PARAM_STR);
+                    $inserted->bindParam(3, $password_1, PDO::PARAM_STR);
                     
                 
                     

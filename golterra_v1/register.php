@@ -114,7 +114,7 @@ include('sesion_register.php');
       <!-- Password-->
       <br>
       <div class="controls">
-        <input type="password" id="password" name="password_1" placeholder="Password" class="form-control">
+        <input type="password" id="password_1" name="password_1" placeholder="Password" class="form-control">
         <p class="help-block">La contraseña debe tener al menos 4 caracteres</p>
       </div>
     </div>
@@ -123,7 +123,7 @@ include('sesion_register.php');
       <!-- Password -->
       <br>
       <div class="controls">
-        <input type="password" id="password_confirm" name="password_2" placeholder="Password (Confirm)" class="form-control">
+        <input type="password" id="password_2" name="password_2" placeholder="Password (Confirm)" class="form-control">
         <p class="help-block">Por favor confirma la contraseña</p>
       </div>
     </div>
