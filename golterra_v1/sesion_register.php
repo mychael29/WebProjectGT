@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 include('config.php') ;
 
 //require $server . '/sesion.php';
@@ -34,7 +35,7 @@ if (isset($_POST['reg_user'])) {
             // Registrar usuario si no hay errores en el formulario
             if (count($errors) == 0) {
 
-                //$encrypted_password = md5($password);
+                $encrypted_password = md5($password);
                 $query = "Select * from usuarios where email='$email'";
                 $result = $conexion->prepare($query);
                 $result->execute();
