@@ -5,6 +5,7 @@ $server = $url["host"];
 $usernameserver = $url["user"];
 $passwordserver = $url["pass"];
 $db = substr($url["path"], 1);
+
 class Conectar{
 	public static function conexion(){
 		
