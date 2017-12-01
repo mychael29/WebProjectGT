@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 $encrypted_password = md5($password);
                 $query = "Select * from usuarios where email='$email'";
-                $result = $this -> conexion->prepare($query);
+                $result = $conexion->prepare($query);
                 $result->execute();
                 //$result = mysqli_query($this->conexion, $query);
                 
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 }else{
                     //registro
                     $query = "insert into usuarios (username,email,password) values (?,?,?)";
-                    $inserted = $this->conexion->prepare($query);
+                    $inserted = $conexion->prepare($query);
                     
                     //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
                     $inserted->bindParam(1, $username, PDO::PARAM_STR);
