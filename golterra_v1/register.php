@@ -17,12 +17,13 @@
 <body>
 
 <?php
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$url = parse_url(getenv("mysql://b2b3777b3c64cc:45ad416d@us-cdbr-iron-east-05.cleardb.net/heroku_7a006254f2ce144?reconnect=true"));
 
 $server = $url["host"];
 $usernameserver = $url["user"];
 $passwordserver = $url["pass"];
 $db = substr($url["path"], 1);
+
 class Conectar{
 	public static function conexion(){
 		
