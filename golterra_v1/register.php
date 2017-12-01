@@ -17,7 +17,7 @@
 <body>
 
 <?php
-include("config.php");
+include($_SERVER . "config.php");
 //require $server . '/sesion.php';
 session_start();
 $errors = array(); 
