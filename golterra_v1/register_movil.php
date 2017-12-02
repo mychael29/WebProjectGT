@@ -11,7 +11,6 @@ try{
     echo "Linea del error " . $e->getLine();
 }
 
-	
 	if(isset($_POST['email'],$_POST['password'],$_POST['nombres'])) {
 		$email = $_POST['email'];
 		$password = $_POST['password'];
