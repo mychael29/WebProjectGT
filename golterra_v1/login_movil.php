@@ -21,7 +21,7 @@ if(isset($_POST['email'],$_POST['password'])) {
 		$result->execute();
 		//$result = mysqli_query($this->conexion, $query);
 		if($result->rowCount() == 1){
-			$json['success'] = ' Bienvenido '.$email;
+			$json['success'] = 'Bienvenido '.$email;
 			// Al igual como en register_movil, con este json enviamos los datos al MainActivity
 			$query = "SELECT iduser_,email,photo,nombres FROM usuarios WHERE email = ?";
 			
