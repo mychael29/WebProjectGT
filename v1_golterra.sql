@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-11-2017 a las 11:58:37
+-- Tiempo de generación: 06-12-2017 a las 00:00:56
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -19,6 +19,62 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `v1_golterra`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `canchas`
+--
+
+CREATE TABLE `canchas` (
+  `idcancha_` int(9) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `direccion` varchar(200) NOT NULL,
+  `afiliacion` varchar(100) NOT NULL,
+  `photo` varchar(200) DEFAULT NULL,
+  `propietario` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `coordenadas_canchas`
+--
+
+CREATE TABLE `coordenadas_canchas` (
+  `idcancha_` int(9) NOT NULL,
+  `cancha_long` int(200) NOT NULL,
+  `cancha_lat` int(200) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `eventos`
+--
+
+CREATE TABLE `eventos` (
+  `idevento_` int(9) NOT NULL,
+  `date_time` datetime(6) NOT NULL,
+  `cancha` varchar(200) NOT NULL,
+  `modalidad` varchar(100) NOT NULL,
+  `vigencia` datetime(6) NOT NULL,
+  `actividad` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `user_afiliacion_cancha`
+--
+
+CREATE TABLE `user_afiliacion_cancha` (
+  `idusercancha_` int(9) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `nombres` varchar(200) NOT NULL,
+  `cancha` varchar(100) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -140,6 +196,24 @@ INSERT INTO `usuarios` (`iduser_`, `username`, `email`, `password`, `photo`, `no
 --
 
 --
+-- Indices de la tabla `canchas`
+--
+ALTER TABLE `canchas`
+  ADD PRIMARY KEY (`idcancha_`);
+
+--
+-- Indices de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  ADD PRIMARY KEY (`idevento_`);
+
+--
+-- Indices de la tabla `user_afiliacion_cancha`
+--
+ALTER TABLE `user_afiliacion_cancha`
+  ADD PRIMARY KEY (`idusercancha_`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -151,6 +225,21 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
+--
+-- AUTO_INCREMENT de la tabla `canchas`
+--
+ALTER TABLE `canchas`
+  MODIFY `idcancha_` int(9) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `eventos`
+--
+ALTER TABLE `eventos`
+  MODIFY `idevento_` int(9) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `user_afiliacion_cancha`
+--
+ALTER TABLE `user_afiliacion_cancha`
+  MODIFY `idusercancha_` int(9) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
