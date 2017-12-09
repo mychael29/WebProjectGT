@@ -46,7 +46,7 @@
 </head>
 
 <body>
-<nav class="header-nav header-nav-default header-nav-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
    
     <div class="navbar-header">
