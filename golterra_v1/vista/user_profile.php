@@ -110,9 +110,10 @@
 
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
- <li><a href="http://smite.guru/builds">Información  </a></li>
-  <li><a href="http://smite.guru/items">    Casual    </a></li>
-   <li><a href="http://smite.guru/tierlists">    Ranked    </a></li> <li><a href="http://smite.guru/leaderboards/pc">    Torneos    </a></li>   </ul> 
+ <li><a href="http://smite.guru/builds">Información</a></li>
+  <li><a href="http://smite.guru/items">Casual</a></li>
+   <li><a href="http://smite.guru/tierlists">Ranked</a></li> 
+   <li><a href="http://smite.guru/leaderboards/pc">Torneos</a></li>   </ul> 
    </div> </div> </nav>
 
 
