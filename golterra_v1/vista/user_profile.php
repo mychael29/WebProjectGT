@@ -107,15 +107,12 @@
 <nav class="header-nav"> 
 <div class="container"> 
 <div class="header-nav-mobile"> 
-<div class="nav-toolbar"> 
-<ul class="nav-icons">  
-<li> <a href="http://smite.guru/login"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a> </li>  </ul>
- 
+
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
- <li><a href="http://smite.guru/builds">Builds</a></li>
-  <li><a href="http://smite.guru/items">Items</a></li>
-   <li><a href="http://smite.guru/tierlists">Tierlists</a></li> <li><a href="http://smite.guru/leaderboards/pc">Leaderboards</a></li> <li><a id="nav-giveaway" href="http://smite.guru/giveaway">Giveaway</a></li> <li> <a href="https://uproar.gg/aff/smiteguru" class="sponsored" style=" background: #704ea0; margin-top: 10px; border-radius: 5px; color: #fff; padding: 0;"> <div style="border-right: 1px solid #8c63c7;display: inline-block;padding: 5px 10px;"> <img src="./MichaelJared&#39;s Profile - SmiteGuru_files/uproar.png" style="height: 20px;"> </div> <span style="font-family: &#39;Open Sans&#39;, sans-serif;text-transform: none;font-weight: 600;letter-spacing: normal;font-size: 14px;margin: 0 10px 0px 5px;vertical-align: middle;">Play for Prizes</span> </a> </li> </ul> 
+ <li><a href="http://smite.guru/builds">  Información  </a></li>
+  <li><a href="http://smite.guru/items">  Casual  </a></li>
+   <li><a href="http://smite.guru/tierlists">  Ranked  </a></li> <li><a href="http://smite.guru/leaderboards/pc">  Torneos  </a></li>   </ul> 
    </div> </div> </nav>
 
 
