@@ -1,10 +1,12 @@
 body {
     padding-top: 0px;
     padding-bottom: 40px;
-    background-color: #eee;
+    background: url(images/imagen_1.jpg);
+    
   }
   
   .form-signin {
+    background: rgba(0,0,0,.7);
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;

@@ -15,7 +15,7 @@
 
 </head>
 
-<body class="bodycustom-form">
+<body>
 <?php include('sesion_login.php') ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
@@ -86,7 +86,7 @@
 <br>
 <div class="container">
  
-<div class="contenedor-form">
+
 	<form class="form-signin" method="post" action="login.php">
 
 		<?php include('errors.php'); ?> 
@@ -104,7 +104,7 @@
     No eres miembro? <a href="register.php">Registrate</a>
 		</p>
 	</form>
-</div>
+
 </div>
 
 
