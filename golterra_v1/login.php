@@ -84,10 +84,9 @@
 </nav>
 <br>
 <br>
-
- 
- <div class="contenedor-form">
-	
+<div class="container">
+<div class="bodycustom-form">
+  <div class="contenedor-form">
 	<form class="form-signin" method="post" action="login.php">
 
 		<?php include('errors.php'); ?> 
@@ -105,8 +104,9 @@
     No eres miembro? <a href="register.php">Registrate</a>
 		</p>
 	</form>
- </div>
-
+  </div>
+</div>
+</div>
 
 
 
