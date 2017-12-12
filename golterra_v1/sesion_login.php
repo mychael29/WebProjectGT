@@ -35,12 +35,12 @@ if(isset($_POST['login_user'])){ // ya se cambio, averiguar mejor, buscar ejempl
         $result->execute();
         //$result = mysqli_query($this->conexion, $query);
         if($result->rowCount() == 1){
-            $query = "SELECT username FROM usuarios WHERE email='$email'";
+            $query = "SELECT username,email,nombres,photo FROM usuarios WHERE email='$email'";
             $comando = $conexion->prepare($query);
             $comando->execute();
             $row = $comando->fetch(PDO::FETCH_ASSOC);
-            $username = $row['username'];
-            $_SESSION['username'] = $username; //CAMBIAR USERNAME POR EMAIL
+        
+            $_SESSION['username'] = $row; //CAMBIAR USERNAME POR EMAIL
             
             header('location: index.php');
 

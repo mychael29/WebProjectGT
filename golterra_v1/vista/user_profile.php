@@ -59,7 +59,7 @@
       if(!isset($_SESSION['username'])){
         echo "Jugador";
       }else{
-        echo $_SESSION['username']; 
+        echo $_SESSION['username']['username']; 
       }?> <span class="caret"></span></a>
         
         <ul class="dropdown-menu">
@@ -76,9 +76,9 @@
                                                                 <a href="#">Cambiar foto</a></p>
                                                         </div>
                                                         <div class="col-md-7">
-                                                            <span>Nombre/username</span>
+                                                            <span><?php echo $_SESSION['username']['nombres']; ?></span>
                                                             <p class="text-muted small">
-                                                                correo@android.com</p>
+                                                            <?php echo $_SESSION['username']['email']; ?></p>
                                                             <div class="divider">
                                                             </div>
                                                             <a href='user_profile.php' class="btn btn-primary btn-sm active">Ver Perfil</a>

@@ -80,7 +80,7 @@
                                                 <div class="navbar-content">
                                                     <div class="row">
                                                         <div class="col-md-5">
-                                                            <img src="https://pbs.twimg.com/profile_images/939742860353601537/OaCKi9uT_400x400.jpg"
+                                                            <img src='https://arcane-ravine-59770.herokuapp.com/json/' . <?php echo $_SESSION['username']['photo']; ?>
                                                                 alt="Alternate Text" class="img-responsive" />
                                                             <p class="text-center small">
                                                                 <a href="#">Cambiar foto</a></p>
