@@ -69,7 +69,12 @@
       if(!isset($_SESSION['username'])){
         echo "Jugador";
       }else{
-        echo $_SESSION['username']['username']; 
+        if(empty($_SESSION['username']['username'])){
+          echo "SIN USERNAME";
+        }else{
+          echo $_SESSION['username']['username']; 
+        }
+       
       }?> <span class="caret"></span></a>
         
         <ul class="dropdown-menu">
