@@ -100,8 +100,7 @@
 <div class="container target">
     <div class="row">
         <div class="col-sm-10">
-        <h1>MichaelJared <br><small>Perú Lima</small></h1>
-         
+        <h1>Nombre / username<br><small>Localidad</small></h1>         
 <br>
 
 <nav class="header-nav"> 
@@ -109,12 +108,16 @@
 <div class="header-nav-mobile"> 
 
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
- <li><a href="http://smite.guru/builds">Información</a></li>
-  <li><a href="http://smite.guru/items">Casual</a></li>
-   <li><a href="http://smite.guru/tierlists">Ranked</a></li> 
-   <li><a href="http://smite.guru/leaderboards/pc">Torneos</a></li>   </ul> 
-   </div> </div> </nav>
+   
+   <ul class="nav navbar-nav">
+       <li><a href="">Información</a></li>
+       <li><a href="">Casual</a></li>
+       <li><a href="">Ranked</a></li> 
+       <li><a href="">Torneos</a></li> 
+   </ul> 
+</div> 
+</div> 
+</nav>
 
 
 
@@ -134,70 +137,56 @@
         <div class="col-sm-3">
             <!--left col-->
             <ul class="list-group">
-                <li class="list-group-item text-muted" contenteditable="false">Profile</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Joined</strong></span> 2.13.2014</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Last seen</strong></span> Yesterday</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Real name</strong></span> Joseph
-                        Doe</li>
-              <li class="list-group-item text-right"><span class="pull-left"><strong class="">Role: </strong></span> Pet Sitter
+                <li class="list-group-item text-muted" contenteditable="false">Perfil</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Se unio</strong></span> 10/11/2017</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Ultima vez visto</strong></span> No definido</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Nombre real</strong></span> Maycol Meza Roque</li>
+              <li class="list-group-item text-right"><span class="pull-left"><strong class="">Rol principal: </strong></span> Arquero
                
                       </li>
             </ul>
-           <div class="panel panel-default">
-             <div class="panel-heading">Insured / Bonded?
-
-                </div>
-                <div class="panel-body"><i style="color:green" class="fa fa-check-square"></i> Yes, I am insured and bonded.
-
-                </div>
-            </div>
+           
             <div class="panel panel-default">
                 <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i>
 
                 </div>
-                <div class="panel-body"><a href="http://bootply.com" class="">bootply.com</a>
+                <div class="panel-body"><a href="https://www.facebook.com/mychael29" class="">facebook.com/mychael29</a>
 
                 </div>
             </div>
           
             <ul class="list-group">
-                <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i>
+                <li class="list-group-item text-muted">Actividad <i class="fa fa-dashboard fa-1x"></i>
 
                 </li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Shares</strong></span> 125</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Comparte</strong></span> 125</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Likes</strong></span> 13</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Posts</strong></span> 37</li>
-                        <li class="list-group-item text-right"><span class="pull-left"><strong class="">Followers</strong></span> 78</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Publicaciones</strong></span> 37</li>
+                        <li class="list-group-item text-right"><span class="pull-left"><strong class="">Seguidores</strong></span> 78</li>
             </ul>
-            <div class="panel panel-default">
-                <div class="panel-heading">Social Media</div>
-                <div class="panel-body">	<i class="fa fa-facebook fa-2x"></i>  <i class="fa fa-github fa-2x"></i> 
-                    <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i>  <i class="fa fa-google-plus fa-2x"></i>
-
-                </div>
-            </div>
+         
         </div>
         <!--/col-3-->
         <div class="col-sm-9" style="" contenteditable="false">
             <div class="panel panel-default">
-                <div class="panel-heading">Starfox221's Bio</div>
-                <div class="panel-body"> A long description about me.
+                <div class="panel-heading">Nombre / username del usuario</div>
+                <div class="panel-body"> Descripción sobre mí.
 
                 </div>
             </div>
             <div class="panel panel-default target">
-                <div class="panel-heading" contenteditable="false">Pets I Own</div>
+                <div class="panel-heading" contenteditable="false">Ultimos partidos jugados</div>
                 <div class="panel-body">
                   <div class="row">
 				<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="300x200" src="http://lorempixel.com/600/200/people">
+						<img alt="300x200" src="">
 						<div class="caption">
 							<h3>
-								Rover
+								Titulo
 							</h3>
 							<p>
-								Cocker Spaniel who loves treats.
+								Descripcion.
 							</p>
 							<p>
 							
@@ -207,13 +196,13 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="300x200" src="http://lorempixel.com/600/200/city">
+						<img alt="300x200" src="">
 						<div class="caption">
 							<h3>
-								Marmaduke
+								Titulo
 							</h3>
 							<p>
-								Is just another friendly dog.
+								Descripcion.
 							</p>
 							<p>
 							
@@ -223,13 +212,13 @@
 				</div>
 				<div class="col-md-4">
 					<div class="thumbnail">
-						<img alt="300x200" src="http://lorempixel.com/600/200/sports">
+						<img alt="300x200" src="">
 						<div class="caption">
 							<h3>
-								Rocky
+								Titulo
 							</h3>
 							<p>
-								Loves catnip and naps. Not fond of children.
+								Descripcion.
 							</p>
 							<p>
 							
@@ -244,48 +233,9 @@
         </div>
               
     </div>
-           <div class="panel panel-default">
-                <div class="panel-heading">Starfox221's Bio</div>
-                <div class="panel-body"> A long description about me.
+   </div>
 
-                </div>
-</div></div>
-
-    <div id="push"></div>
         </div>
-        <footer id="footer">
-            <div class="row-fluid">
-                <div class="span3">
-                    <p> 
-                        <a href="http://twitter.com/Bootply" rel="nofollow" title="Bootply on Twitter" target="ext">Twitter</a><br>
-                        <a href="https://plus.google.com/+Bootply" rel="publisher">Google+</a><br>
-                        <a href="http://facebook.com/Bootply" rel="nofollow" title="Bootply on Facebook" target="ext">Facebook</a><br>
-                        <a href="https://github.com/iatek/bootply" title="Bootply on GitHub" target="ext">GitHub</a><br>
-                    </p>
-                </div>
-                <div class="span3">
-                    <p> 
-                        <a data-toggle="modal" role="button" href="#contactModal">Contact Us</a><br>
-                        <a href="/tags">Tags</a><br>
-                        <a href="/bootstrap-community">Community</a><br>
-                        <a href="/upgrade">Upgrade</a><br>
-                    </p>
-                </div>
-                <div class="span3">
-                    <p> 
-                        <a href="http://www.bootbundle.com" target="ext" rel="nofollow">BootBundle</a><br>
-                        <a href="https://bootstrapbay.com/?ref=skelly" target="_ext" rel="nofollow" title="Premium Bootstrap themes">Bootstrap Themes</a><br>
-                        <a href="http://www.bootstrapzero.com" target="_ext" rel="nofollow" title="Free Bootstrap templates">BootstrapZero</a><br>
-                        <a href="http://upgrade-bootstrap.bootply.com/">2.x Upgrade Tool</a><br>
-                    </p>
-                </div>
-                <div class="span3">
-                    <span class="pull-right">©Copyright 2013-2014 <a href="/" title="The Bootstrap Playground">Bootply</a> | <a href="/about#privacy">Privacy</a></span>
-                </div>
-            </div>
-        </footer>
-
-
 
 
 <hr>
