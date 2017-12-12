@@ -154,9 +154,9 @@
 
 <section>
  
-<div class="container">
   <div class="jumbotron text-center">
    
+    <div class="container">
       <div class="row">
         <div class="col-xs12">
           <h1>Promover nuevos talentos.</h1>
