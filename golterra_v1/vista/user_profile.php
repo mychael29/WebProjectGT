@@ -164,8 +164,8 @@
 
 
         </div>
-      <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="https://pbs.twimg.com/profile_images/939742860353601537/OaCKi9uT_400x400.jpg"></a>
-
+      <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="https://pbs.twimg.com/profile_images/939742860353601537/OaCKi9uT_400x400.jpg"></a>
+     
         </div>
     </div>
   <br>
