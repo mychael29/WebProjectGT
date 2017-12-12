@@ -59,7 +59,11 @@
       if(!isset($_SESSION['username'])){
         echo "Jugador";
       }else{
-        echo $_SESSION['username']['username']; 
+        if(empty($_SESSION['username']['username'])){
+            echo "sin username";
+          }else{
+            echo $_SESSION['username']['username']; 
+          }
       }?> <span class="caret"></span></a>
         
         <ul class="dropdown-menu">
@@ -70,7 +74,7 @@
                                                 <div class="navbar-content">
                                                     <div class="row">
                                                         <div class="col-md-5">
-                                                            <img src="https://pbs.twimg.com/profile_images/939742860353601537/OaCKi9uT_400x400.jpg"
+                                                            <img src="<?php echo 'https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo']; ?>"
                                                                 alt="Alternate Text" class="img-responsive" />
                                                             <p class="text-center small">
                                                                 <a href="#">Cambiar foto</a></p>
@@ -164,7 +168,7 @@
 
 
         </div>
-      <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="https://pbs.twimg.com/profile_images/939742860353601537/OaCKi9uT_400x400.jpg"></a>
+      <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="<?php echo 'https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo']; ?>"></a>
      
         </div>
     </div>
