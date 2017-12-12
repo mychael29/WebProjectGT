@@ -84,7 +84,7 @@
 </nav>
 <br>
 <br>
-<div class="container">
+
  
  <div class="contenedor-form">
 	
@@ -106,7 +106,7 @@
 		</p>
 	</form>
  </div>
-</div>
+
 
 
 
