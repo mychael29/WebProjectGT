@@ -42,7 +42,7 @@ if(isset($_POST['login_user'])){ // ya se cambio, averiguar mejor, buscar ejempl
             $username = $row;
             $_SESSION['username'] = $username; //CAMBIAR USERNAME POR EMAIL
             
-            header('location: https://arcane-ravine-59770.herokuapp.com/index.php');
+            header('location: index.php');
 
             //echo json_encode($json);
             //mysqli_close($this -> conexion);
