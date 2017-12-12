@@ -92,7 +92,7 @@
                                                                 <a href="#" class="btn btn-default btn-sm">Cambiar Passowrd</a>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <a href="index.php?logout='1'" class="btn btn-default btn-sm pull-right">Sign Out</a>
+                                                                <a href="../index.php?logout='1'" class="btn btn-default btn-sm pull-right">Sign Out</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -136,7 +136,7 @@
 <div class="container target">
     <div class="row">
         <div class="col-sm-10">
-        <h1>Nombre / username<br><small>Localidad</small></h1>         
+        <h1><?$_SESSION['username']?><br><small>Localidad</small></h1>         
 <br>
 
 <nav class="header-nav"> 
