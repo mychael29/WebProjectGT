@@ -86,7 +86,7 @@
 <br>
 
 <div class="bodycustom">
-<div class="container">
+
  
 
 	<form class="form-signin" method="post" action="login.php">
@@ -107,7 +107,7 @@
 		</p>
 	</form>
 
-</div>
+
 
 </div>
 
