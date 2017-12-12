@@ -2,7 +2,7 @@
 	session_start(); 
     
         if (!isset($_SESSION['username'])) {
-            $_SESSION['msg'] = "You must log in first";
+            $_SESSION['msg'] = "Debes iniciar sesión primero";
             header('location: ../login.php');
         }
     
@@ -25,7 +25,7 @@
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="../css/bootstrap.css">
-<link rel="stylesheet" href="css/cssinfoprofile.css">
+<link rel="stylesheet" href="../css/cssinfoprofile.css">
 </head>
 
 <body>
