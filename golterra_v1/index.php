@@ -80,15 +80,15 @@
                                                 <div class="navbar-content">
                                                     <div class="row">
                                                         <div class="col-md-5">
-                                                            <img src="http://placehold.it/120x120"
+                                                            <img src="https://pbs.twimg.com/profile_images/939742860353601537/OaCKi9uT_400x400.jpg"
                                                                 alt="Alternate Text" class="img-responsive" />
                                                             <p class="text-center small">
                                                                 <a href="#">Cambiar foto</a></p>
                                                         </div>
                                                         <div class="col-md-7">
-                                                            <span>Bhaumik Patel</span>
+                                                            <span>Nombre/username</span>
                                                             <p class="text-muted small">
-                                                                mail@gmail.com</p>
+                                                                correo@android.com</p>
                                                             <div class="divider">
                                                             </div>
                                                             <a href='vista/user_profile.php' class="btn btn-primary btn-sm active">Ver Perfil</a>

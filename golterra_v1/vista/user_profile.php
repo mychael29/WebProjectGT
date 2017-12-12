@@ -65,19 +65,55 @@
         <ul class="dropdown-menu">
           
         <?php  if (isset($_SESSION['username'])) : ?>
-        <li><a href='user_profile.php'>Perfil</a></li>
+
+        <li>
+                                                <div class="navbar-content">
+                                                    <div class="row">
+                                                        <div class="col-md-5">
+                                                            <img src="https://pbs.twimg.com/profile_images/939742860353601537/OaCKi9uT_400x400.jpg"
+                                                                alt="Alternate Text" class="img-responsive" />
+                                                            <p class="text-center small">
+                                                                <a href="#">Cambiar foto</a></p>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <span>Nombre/username</span>
+                                                            <p class="text-muted small">
+                                                                correo@android.com</p>
+                                                            <div class="divider">
+                                                            </div>
+                                                            <a href='user_profile.php' class="btn btn-primary btn-sm active">Ver Perfil</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="navbar-footer">
+                                                    <div class="navbar-footer-content">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <a href="#" class="btn btn-default btn-sm">Cambiar Passowrd</a>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <a href="index.php?logout='1'" class="btn btn-default btn-sm pull-right">Sign Out</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+
+
+<!--
+        <li><a href='vista/user_profile.php'>Perfil</a></li>
         <li><a href='#'>Rendimiento</a></li>
         <li><a href='#'>Historial de partidos</a></li>
         <li role='separator' class='divider'></li>
         <li><a href='#'>Ajustes</a></li>
-        <li><a href="../index.php?logout='1'">Cerrar Sesión</a></li>
+        <li><a href="index.php?logout='1'">Cerrar Sesión</a></li>-->
 		    <?php endif ?>
 
         <?php  if (!isset($_SESSION['username'])) : ?>
-        <li><a href='../login.php'>Iniciar sesión</a></li>
-        <li><a href='../register.php'>Registrarse</a></li>
+        <li><a href="login.php">Iniciar sesión</a></li>
+        <li><a href="register.php">Registrarse</a></li>
 		    <?php endif ?>
-
         </ul>
   
       </li>
@@ -128,7 +164,7 @@
 
 
         </div>
-      <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.rlsandbox.com/img/profile.jpg"></a>
+      <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="https://pbs.twimg.com/profile_images/939742860353601537/OaCKi9uT_400x400.jpg"></a>
 
         </div>
     </div>
