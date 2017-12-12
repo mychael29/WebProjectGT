@@ -10,7 +10,7 @@
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
-
+<link rel="stylesheet" href="css/estilo_loginregister.css">
 <link href="signin.css" rel="stylesheet">
 
 </head>
@@ -86,6 +86,7 @@
 <br>
 <div class="container">
  
+ <div class="contenedor-form">
 	
 	<form class="form-signin" method="post" action="login.php">
 
@@ -104,7 +105,7 @@
     No eres miembro? <a href="register.php">Registrate</a>
 		</p>
 	</form>
-	
+ </div>
 </div>
 
 
