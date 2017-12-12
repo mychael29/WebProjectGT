@@ -1,12 +1,12 @@
 body {
     padding-top: 0px;
     padding-bottom: 40px;
-    background: #F8F8FF;
+   
     
   }
   
   .form-signin {
-    background: rgba(0,0,0,.7);
+    background: #F8F8FF;
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
