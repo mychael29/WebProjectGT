@@ -86,10 +86,10 @@
 <br>
 
 <div class="bodycustom">
-
+<div class="container">
  
 
-	<form class="form-signin" method="post" action="login.php">
+	<form class="" method="post" action="login.php">
 
 		<?php include('errors.php'); ?> 
 
@@ -107,7 +107,7 @@
 		</p>
 	</form>
 
-
+</div>
 
 </div>
 
