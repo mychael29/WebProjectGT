@@ -136,7 +136,7 @@
 <div class="container target">
     <div class="row">
         <div class="col-sm-10">
-        <h1><?$_SESSION['username'].gettext?><br><small>Localidad</small></h1>         
+        <h1><?echo $_SESSION['username'].gettext?><br><small>Localidad</small></h1>         
 <br>
 
 <nav class="header-nav"> 
