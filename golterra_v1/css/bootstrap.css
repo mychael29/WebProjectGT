@@ -4977,7 +4977,7 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background: url('http://localhost/golterra_v1/images/imagen_4.jpg');
+  background: url('images/imagen_4.jpg');
   background-size: cover;
   height : 50%; 
 }
