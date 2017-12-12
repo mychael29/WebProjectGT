@@ -1,4 +1,4 @@
-<?php include($server . '/sesion_login.php') ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -16,6 +16,7 @@
 </head>
 
 <body>
+<?php include('sesion_login.php') ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
   
