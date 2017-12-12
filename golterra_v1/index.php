@@ -31,7 +31,7 @@
 
 <!-- Bootstrap -->
 <link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/cssinfoprofile.css">
+<!--<link rel="stylesheet" href="css/cssinfoprofile.css">-->
 
 
 </head>
@@ -69,9 +69,8 @@
       if(!isset($_SESSION['username'])){
         echo "Jugador";
       }else{
-
         if(empty($_SESSION['username']['username'])){
-          echo "sin username";
+          echo "SIN USERNAME";
         }else{
           echo $_SESSION['username']['username']; 
         }
