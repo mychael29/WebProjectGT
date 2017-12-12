@@ -39,7 +39,7 @@ if(isset($_POST['login_user'])){ // ya se cambio, averiguar mejor, buscar ejempl
             $comando = $conexion->prepare($query);
             $comando->execute();
             $row = $comando->fetch(PDO::FETCH_ASSOC);
-            $username = $row;
+            $username = $comando;
             $_SESSION['username'] = $username; //CAMBIAR USERNAME POR EMAIL
             
             header('location: index.php');
