@@ -87,7 +87,7 @@
 
 <div class="bodycustom">
 <div class="container">
- <div class="jumbotron center">
+ <div class="jumbotron text-center">
 
 	<form class="form-signin" method="post" action="login.php">
 
