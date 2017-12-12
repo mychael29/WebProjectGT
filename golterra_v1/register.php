@@ -92,6 +92,8 @@ include('sesion_register.php');
  <?php include('errors.php'); ?>
   <fieldset>
     <h3 class="form-signin-heading">Registro</h3>
+
+
     <div class="control-group">
       <!-- Username -->
       <div class="controls">
@@ -100,6 +102,14 @@ include('sesion_register.php');
       </div>
     </div>
  
+    <div class="control-group">
+      <!-- Nombres -->
+      <div class="controls">
+        <input type="text" id="nombres" name="nombres" placeholder="Nombres" class="form-control" value="<?php echo $nombres; ?>">
+        <p class="help-block">Por favor ingrese completo o incompleto sus nombres y/o apellidos reales</p>
+      </div>
+    </div>
+
     <div class="control-group">
       <!-- E-mail -->
       <br>
