@@ -87,9 +87,9 @@
 
 <div class="bodycustom">
 <div class="container">
- 
+ <div class="jumbotron center">
 
-	<form class="" method="post" action="login.php">
+	<form class="form-signin" method="post" action="login.php">
 
 		<?php include('errors.php'); ?> 
 
@@ -106,7 +106,7 @@
     No eres miembro? <a href="register.php">Registrate</a>
 		</p>
 	</form>
-
+  </div>
 </div>
 
 </div>
