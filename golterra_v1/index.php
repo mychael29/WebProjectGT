@@ -69,6 +69,7 @@
       if(!isset($_SESSION['username'])){
         echo "Jugador";
       }else{
+        
         if(empty($_SESSION['username']['username'])){
           echo "SIN USERNAME";
         }else{
