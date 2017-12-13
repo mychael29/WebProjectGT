@@ -8,10 +8,19 @@
 <body>
 <?php
 
-require_once("Conectar.php");
-$base=Conectar::conexion();
+include('../config.php') ;
+
+try{
+    $conexion = new PDO($host,$usernameserver,$passwordserver);
+    $conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conexion -> exec("SET CHARACTER SET UTF8");
+}catch(Exception $e){
+    die("Error " . $e->getMessage());
+    echo "Linea del error " . $e->getLine();
+}
+
 $Id=$_GET["Id"];
-$base->query("DELETE FROM usuarios WHERE iduser_='$Id'");
+$conexion->query("DELETE FROM usuarios WHERE iduser_='$Id'");
 header("Location:../index.php");
 
 ?>

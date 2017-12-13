@@ -10,8 +10,17 @@
 
 <h1>ACTUALIZAR</h1>
 <?php
-require_once("../modelo/conectar.php");
-$base=Conectar::conexion();
+include('../config.php') ;
+
+try{
+    $conexion = new PDO($host,$usernameserver,$passwordserver);
+    $conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conexion -> exec("SET CHARACTER SET UTF8");
+}catch(Exception $e){
+    die("Error " . $e->getMessage());
+    echo "Linea del error " . $e->getLine();
+}
+
 if(!isset($_POST["bot_actualizar"])){
 $Id=$_GET["Id"];
 $username=$_GET["username"];
@@ -23,7 +32,7 @@ $nombres=$_GET["nombres"];
 	$email=$_POST["email"];
   $nombres=$_POST["nombres"];
 	$sql="UPDATE usuarios set username=:miUsername, email=:miEmail, nombres=:miNombres WHERE iduser_=:miId";
-	$resultado=$base->prepare($sql);
+	$resultado=$conexion->prepare($sql);
 	$resultado->execute(array(":miId"=>$Id, ":miUsername"=>$username, "miEmail"=>$email, ":miNombres"=>$nombres));
 	header("Location:../index.php");
 }
