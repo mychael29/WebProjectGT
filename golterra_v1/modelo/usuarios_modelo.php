@@ -1,9 +1,5 @@
 <?php
 
-
-	
-	
-	private $usuarios;
 	
 	include('../config.php') ;
 	try{
