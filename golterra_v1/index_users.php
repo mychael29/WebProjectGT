@@ -102,11 +102,11 @@
       
       <?php
       
-      require('../modelo/usuarios_modelo.php');
+      require('modelo/usuarios_modelo.php');
       
       $matrizUsuario = $usuarios;
       
-      require('../vista/usuarios_view.php');
+      require('vista/usuarios_view.php');
     
        ?>
       </div>
