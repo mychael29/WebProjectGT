@@ -99,8 +99,11 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 text-center">
+      
       <?php
+      error_reporting(E_ALL);
        require('controlador/usuarios_controlador.php');
+       error_reporting(E_ALL);
        ?>
       </div>
     </div>
