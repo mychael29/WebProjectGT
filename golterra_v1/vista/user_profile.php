@@ -75,7 +75,7 @@
                                                     <div class="row">
                                                         <div class="col-md-5">
                                                             <img src="<?php echo 'https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo']; ?>"
-                                                                alt="Alternate Text" class="img-responsive img-thumbnail" />
+                                                                alt="Sin foto" class="img-responsive img-thumbnail" />
                                                             <p class="text-center small">
                                                                 <a href="#">Cambiar foto</a></p>
                                                         </div>
@@ -172,7 +172,7 @@
 
 
         </div>
-      <div class="col-sm-2"><a href="<?php echo 'https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo']; ?>" class="pull-right"><img title="profile image" class="avatar" src="<?php echo 'https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo']; ?>"></a>
+      <div class="col-sm-2"><a href="<?php echo 'https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo']; ?>" class="pull-right"><img title="imagen de perfil" class="avatar" src="<?php echo 'https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo']; ?>"></a>
       
         </div>
     </div>
