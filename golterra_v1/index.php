@@ -136,10 +136,10 @@
 <form class="navbar-form navbar-right" role="search">
       <form method="post" class="nav-search"> 
         <div class="input-group"> 
-          <input id="nav-search-box" type="text" class="form-control" placeholder="Search Player..."> 
-            <span class="input-group-btn"> 
-              <button class="btn search-btn" type="submit"> <i class="glyphicon glyphicon-search"></i> </button> 
-            </span> 
+           <input id="nav-search-box" type="text" class="form-control" placeholder="Buscar jugador..."> 
+             <span class="input-group-btn"> 
+               <button class="btn search-btn" type="submit"> <i class="glyphicon glyphicon-search"></i> </button> 
+             </span> 
         </div> 
       </form>
 </form>

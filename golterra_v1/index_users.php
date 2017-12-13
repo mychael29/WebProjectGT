@@ -124,11 +124,15 @@
       </ul>
 
       <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+      <form method="post" class="nav-search"> 
+        <div class="input-group"> 
+           <input id="nav-search-box" type="text" class="form-control" placeholder="Buscar jugador..."> 
+             <span class="input-group-btn"> 
+               <button class="btn search-btn" type="submit"> <i class="glyphicon glyphicon-search"></i> </button> 
+             </span> 
+        </div> 
       </form>
+</form>
 </div>
 </div>
 </nav>
