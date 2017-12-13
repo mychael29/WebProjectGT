@@ -80,28 +80,69 @@
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true"><span class="glyphicon glyphicon-user"></span> <?php 
         
         if(!isset($_SESSION['username'])){
-          echo "Jugador";
-        }else{
-          echo $_SESSION['username']; 
-        }?> <span class="caret"></span></a>
-          
-          <ul class="dropdown-menu">
+            echo "Jugador";
+          }else{
+            if(empty($_SESSION['username']['username'])){
+              echo "sin username";
+            }else{
+              echo $_SESSION['username']['username']; 
+            }
+           
+          }?> <span class="caret"></span></a>
             
-          <?php  if (isset($_SESSION['username'])) : ?>
-          <li><a href='user_profile.php'>Perfil</a></li>
-          <li><a href='#'>Rendimiento</a></li>
-          <li><a href='#'>Historial de partidos</a></li>
-          <li role='separator' class='divider'></li>
-          <li><a href='#'>Ajustes</a></li>
-          <li><a href="../index.php?logout='1'">Cerrar Sesión</a></li>
-              <?php endif ?>
-  
-          <?php  if (!isset($_SESSION['username'])) : ?>
-          <li><a href='../login.php'>Iniciar sesión</a></li>
-          <li><a href='../register.php'>Registrarse</a></li>
-              <?php endif ?>
-  
-          </ul>
+            <ul class="dropdown-menu">
+              
+            <?php  if (isset($_SESSION['username'])) : ?>
+    
+            <li>
+                                                    <div class="navbar-content">
+                                                        <div class="row">
+                                                            <div class="col-md-5">
+                                                                <img src="<?php echo 'https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo']; ?>"
+                                                                    alt="Alternate Text" class="img-responsive img-thumbnail" />
+                                                                <p class="text-center small">
+                                                                    <a href="#">Cambiar foto</a></p>
+                                                            </div>
+                                                            <div class="col-md-7">
+                                                                <span><?php echo $_SESSION['username']['nombres']; ?></span>
+                                                                <p class="text-muted small">
+                                                                <?php echo $_SESSION['username']['email']; ?></p>
+                                                                <div class="divider">
+                                                                </div>
+                                                                <a href='user_profile.php' class="btn btn-primary btn-sm active">Ver Perfil</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="navbar-footer">
+                                                        <div class="navbar-footer-content">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <a href="#" class="btn btn-default btn-sm">Cambiar Passowrd</a>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <a href="../index.php?logout='1'" class="btn btn-default btn-sm pull-right">Sign Out</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+    
+    
+    
+    <!--
+            <li><a href='vista/user_profile.php'>Perfil</a></li>
+            <li><a href='#'>Rendimiento</a></li>
+            <li><a href='#'>Historial de partidos</a></li>
+            <li role='separator' class='divider'></li>
+            <li><a href='#'>Ajustes</a></li>
+            <li><a href="index.php?logout='1'">Cerrar Sesión</a></li>-->
+                <?php endif ?>
+    
+            <?php  if (!isset($_SESSION['username'])) : ?>
+            <li><a href="../login.php">Iniciar sesión</a></li>
+            <li><a href="../register.php">Registrarse</a></li>
+                <?php endif ?>
+            </ul>
     
         </li>
         </ul>
