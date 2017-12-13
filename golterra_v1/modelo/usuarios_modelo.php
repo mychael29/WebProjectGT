@@ -15,7 +15,7 @@
 	
 	include("paginacion.php");
 	
-	$consulta=$this->db->query("SELECT * FROM usuarios LIMIT $empezar_desde, $tamagno_paginas");
+	$consulta=$conexion->query("SELECT * FROM usuarios LIMIT $empezar_desde, $tamagno_paginas");
 	
 	while($filas=$consulta->fetch(PDO::FETCH_ASSOC)){
 		
