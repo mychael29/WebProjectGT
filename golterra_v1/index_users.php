@@ -100,7 +100,7 @@
     <div class="row">
       <div class="col-xs-12 text-center">
       <?php
-       include('controlador/usuarios_controlador.php');
+       require('controlador/usuarios_controlador.php');
        ?>
       </div>
     </div>

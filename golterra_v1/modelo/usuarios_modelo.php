@@ -1,7 +1,7 @@
 <?php
 
 	
-	include('../config.php') ;
+    require('../config.php') ;
 	try{
 		$conexion = new PDO($host,$usernameserver,$passwordserver);
 		$conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -13,7 +13,7 @@
 
 	$usuarios=array();
 	
-	include('paginacion.php');
+	require('paginacion.php');
 	
 	$consulta=$conexion->query("SELECT * FROM usuarios LIMIT $empezar_desde, $tamagno_paginas");
 	

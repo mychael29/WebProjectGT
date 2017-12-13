@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-include("../modelo/paginacion.php");
+require("../modelo/paginacion.php");
 ?>
 
 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
@@ -26,7 +26,7 @@ include("../modelo/paginacion.php");
     </tr> 
     </thead>
    <?php
-		foreach($matrizUsuario[] as $persona):?>
+		foreach($matrizUsuario as $persona):?>
    
    	<tr>
       <td><?php echo $persona["iduser_"]?></td>
