@@ -22,10 +22,10 @@ if(isset($_POST['login_user'])){ // ya se cambio, averiguar mejor, buscar ejempl
     $password = $_POST['password'];
 
     if (empty($email)) {
-        array_push($errors, "Email is required");
+        array_push($errors, "Email es requerido");
     }
     if (empty($password)) {
-        array_push($errors, "Password is required");
+        array_push($errors, "Password es requerido");
     }
 
     if (count($errors) == 0){ /// posible erro aqui
@@ -47,7 +47,7 @@ if(isset($_POST['login_user'])){ // ya se cambio, averiguar mejor, buscar ejempl
             //echo json_encode($json);
             //mysqli_close($this -> conexion);
         }else{
-            array_push($errors, "Wrong username/password combination");
+            array_push($errors, "Email o password incorrecto");
             //mysqli_close($this->conexion);
         }
     }
