@@ -101,8 +101,7 @@
       <div class="col-xs-12 text-center">
       
       <?php
-      
-      require_once("../config.php");
+      require_once("config.php");
       try{
         $conexion = new PDO($host,$usernameserver,$passwordserver);
         $conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -113,7 +112,7 @@
       }
       $usuarios=array();
       
-      require("paginacion.php");
+      require("modelo/paginacion.php");
       
       $consulta=$conexion->query("SELECT * FROM usuarios LIMIT $empezar_desde, $tamagno_paginas");
       
