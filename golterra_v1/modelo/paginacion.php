@@ -1,7 +1,14 @@
 <?php
-    require_once("conectar.php");
-    
-    $base=Conectar::conexion();
+    include('../config.php') ;
+	try{
+		$conexion = new PDO($host,$usernameserver,$passwordserver);
+		$conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$conexion -> exec("SET CHARACTER SET UTF8");
+	}catch(Exception $e){
+		die("Error " . $e->getMessage());
+		echo "Linea del error " . $e->getLine();
+	}		
+
 	
 	//-----------------------------------------paginacion----------------------------------------------//
 	
@@ -26,7 +33,7 @@
 	
 	$empezar_desde=($pagina-1)*$tamagno_paginas;
 	$sql_total="SELECT username, email, nombres FROM usuarios";
-	$resultado=$base->prepare($sql_total);
+	$resultado=$conexion->prepare($sql_total);
 	$resultado->execute(array());
 	$num_filas=$resultado->rowCount();
 	$total_paginas=ceil($num_filas/$tamagno_paginas);
