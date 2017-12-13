@@ -70,7 +70,7 @@
         echo "Jugador";
       }else{
         if(empty($_SESSION['username']['username'])){
-          echo "SIN USERNAME";
+          echo "sin username";
         }else{
           echo $_SESSION['username']['username']; 
         }

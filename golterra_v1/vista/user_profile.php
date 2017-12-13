@@ -140,7 +140,7 @@
 <div class="container target">
     <div class="row">
         <div class="col-sm-10">
-        <h1><?echo $_SESSION['username']['nombres']?><br><small>Region no definido</small></h1>         
+        <h1><?echo $_SESSION['username']['nombres']?><br><small>Region no definida</small></h1>         
 <br>
 
 <nav class="header-nav"> 
