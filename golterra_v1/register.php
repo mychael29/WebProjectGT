@@ -141,7 +141,7 @@ include('sesion_register.php');
     <div class="control-group">
       <!-- Button -->
       <div class="controls">
-        <button class="btn btn-success" name="reg_user" type="submit">Registrar</button><--! reg_user-->
+        <button class="btn btn-success" name="reg_user" type="submit">Registrar</button>
       </div>
 	  </div>
 	
