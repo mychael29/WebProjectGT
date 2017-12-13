@@ -14,7 +14,7 @@ try{
 	
 	//-----------------------------------------paginacion----------------------------------------------//
 	
-	$tamagno_paginas=3;
+	$tamagno_paginas=18;
   
     if(isset($_GET["pagina"])){
 		
