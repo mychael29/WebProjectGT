@@ -168,7 +168,7 @@
 
 
         </div>
-      <div class="col-sm-2"><a href="/users" class="pull-right"><div class="avatar" style="<?php echo 'background-image: url("https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo'].'")'; ?>" ></div></a>
+      <div class="col-sm-2"><a href="/users" class="pull-right"><div class="avatar" style="<?php echo 'background-image: url(https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo'] . ')'; ?>" ></div></a>
       
       <!--<img title="profile image" class="avatar img-responsive" src=" ">-->
         </div>
