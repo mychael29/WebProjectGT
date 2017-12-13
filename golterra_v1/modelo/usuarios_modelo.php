@@ -19,7 +19,7 @@
 		  
 		  if ($_GET["pagina"]==1){
 			  
-			  header("Location:index_users.php");
+			  header("Location:../index_users.php");
 			  
 		  }else{
 			  
