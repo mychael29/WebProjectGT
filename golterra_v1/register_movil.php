@@ -11,11 +11,12 @@ try{
     echo "Linea del error " . $e->getLine();
 }
 
-	if(isset($_POST['email'],$_POST['password'],$_POST['nombres'])) {
+	if(isset($_POST['email'],$_POST['password'],$_POST['nombres'],$_POST['username'])) {
 		$email = $_POST['email'];
 		$password = $_POST['password'];
 		$nombres = $_POST['nombres'];
 		$image = $_POST['photo'];
+		$username = $_POST['username'];
 		
 		if($image!="no imagen"){
 			$path  = "json/image_profile/$nombres.jpg"; 
@@ -41,14 +42,15 @@ try{
 				//mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
 			}else{
 				//registro
-                $query = "insert into usuarios (email, password, photo, nombres) values (?,?,?,?)";
+                $query = "insert into usuarios (username, email, password, photo, nombres) values (?,?,?,?,?)";
 				$inserted = $conexion->prepare($query);
 				
 				//$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
-				$inserted->bindParam(1, $email, PDO::PARAM_STR); 
-				$inserted->bindParam(2, $password, PDO::PARAM_STR);
-				$inserted->bindParam(3, $url_image, PDO::PARAM_STR);
-				$inserted->bindParam(4, $nombres, PDO::PARAM_STR);
+				$inserted->bindParam(1, $username, PDO::PARAM_STR); 
+				$inserted->bindParam(2, $email, PDO::PARAM_STR); 
+				$inserted->bindParam(3, $password, PDO::PARAM_STR);
+				$inserted->bindParam(4, $url_image, PDO::PARAM_STR);
+				$inserted->bindParam(5, $nombres, PDO::PARAM_STR);
 				
 				/*
 				if($inserted->execute()){
@@ -62,7 +64,7 @@ try{
 				if($inserted->execute()){
 					$json['success'] = 'Cuenta creada';
 
-					$query = "SELECT iduser_,email,photo,nombres FROM usuarios WHERE email = ?";
+					$query = "SELECT iduser_,username,email,photo,nombres FROM usuarios WHERE email = ?";
 
 					try {
 						// Preparar sentencia

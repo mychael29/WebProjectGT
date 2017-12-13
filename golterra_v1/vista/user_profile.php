@@ -75,7 +75,7 @@
                                                     <div class="row">
                                                         <div class="col-md-5">
                                                             <img src="<?php echo 'https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo']; ?>"
-                                                                title="Sin Imagen" class="img-responsive img-thumbnail" />
+                                                                title="Sin Imagen" class="img-responsive img-thumbnail" /> <!--alt="Alternate Text"-->
                                                             <p class="text-center small">
                                                                 <a href="#">Cambiar foto</a></p>
                                                         </div>
