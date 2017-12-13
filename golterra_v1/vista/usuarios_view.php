@@ -26,7 +26,7 @@ include("../modelo/paginacion.php");
     </tr> 
     </thead>
    <?php
-		foreach($matrizUsuario as $persona):?>
+		foreach($usuarios as $persona):?>
    
    	<tr>
       <td><?php echo $persona["iduser_"]?></td>
