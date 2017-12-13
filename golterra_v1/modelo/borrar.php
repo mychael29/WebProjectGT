@@ -21,7 +21,7 @@ try{
 
 $Id=$_GET["Id"];
 $conexion->query("DELETE FROM usuarios WHERE iduser_='$Id'");
-header("Location:../index.php");
+header("Location:../index_users.php");
 
 ?>
 </body>
