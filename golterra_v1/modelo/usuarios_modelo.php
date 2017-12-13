@@ -17,7 +17,7 @@ class Usuarios_modelo{
 			die("Error " . $e->getMessage());
 			echo "Linea del error " . $e->getLine();
 		}
-		$this->db=Conectar::conexion();
+		$this->db=$conexion;
 		$this->usuarios=array();
 	}
 	

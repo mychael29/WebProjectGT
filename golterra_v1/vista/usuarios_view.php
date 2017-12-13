@@ -4,7 +4,9 @@
 <meta charset="utf-8" />
 </head>
 <body>
-
+<?php
+require("../modelo/paginacion.php");
+?>
 
 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
  <div class="container">
