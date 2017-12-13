@@ -138,8 +138,8 @@
       <th>E-mail</th>
       <th>Nombre y Apellidos</th>
       <th>Región</th>
-      <th>Club Hincha</th>
-      <th>Division Liga</th>
+      <th>Foto</th>
+      <th>Division</th>
       <th class=""></th>
       <th class=""></th>
     </tr> 
@@ -153,7 +153,16 @@
       <td class="text-left"><?php echo $persona["email"]?></td>
       <td class="text-left"><?php echo $persona["nombres"]?></td>
       <td class="text-left">vacio</td>
-      <td class="text-left">vacio</td>
+      <td class="text-left"><?php 
+      if(empty($persona["photo"])){
+        echo "NO";
+      }else{
+        if($persona["photo"]=="sin imagen"){
+          echo "NO";
+        }else{
+          echo "SI";
+        }
+      }?></td>
       <td class="text-left">vacio</td>
       <td class=""><a name='del' id='del' value='Borrar' href="modelo/borrar.php?Id=<?php echo $persona["iduser_"]?>"><span class="glyphicon glyphicon-trash"></span></a></td>
       <td class=""><a name='up' id='up' value='Actualizar' href="vista/editar.php?Id=<?php echo $persona["iduser_"]?> & username=<?php echo $persona["username"]?> & email=<?php echo $persona["email"]?> & nombres=<?php echo $persona["nombres"]?>"><span class="glyphicon glyphicon-edit"></span></a></td>
