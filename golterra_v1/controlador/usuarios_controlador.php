@@ -1,9 +1,10 @@
 <?php
 
-require('../modelo/usuarios_modelo.php');
+require('..\modelo\usuarios_modelo.php');
 
-$matrizUsuario = $usuarios;
+$usuario = new Usuarios_modelo();
+$matrizUsuario = $usuario->get_usuarios();
 
-require('../vista/usuarios_view.php');
+require('..\vista\usuarios_view.php');
 
 ?>

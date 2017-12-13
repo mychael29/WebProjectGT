@@ -1,16 +1,14 @@
 <?php
-
-/*
 include('../config.php') ;
-	try{
-		$conexion = new PDO($host,$usernameserver,$passwordserver);
-		$conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$conexion -> exec("SET CHARACTER SET UTF8");
-	}catch(Exception $e){
-		die("Error " . $e->getMessage());
-		echo "Linea del error " . $e->getLine();
-	}		
-*/
+try{
+	$conexion = new PDO($host,$usernameserver,$passwordserver);
+	$conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$conexion -> exec("SET CHARACTER SET UTF8");
+}catch(Exception $e){
+	die("Error " . $e->getMessage());
+	echo "Linea del error " . $e->getLine();
+}
+
     
 
 	
