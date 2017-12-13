@@ -13,7 +13,7 @@
 
 	$usuarios=array();
 	
-	include("paginacion.php");
+	include('paginacion.php');
 	
 	$consulta=$conexion->query("SELECT * FROM usuarios LIMIT $empezar_desde, $tamagno_paginas");
 	
