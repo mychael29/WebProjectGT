@@ -2,7 +2,7 @@
 	session_start(); 
 
 	if (!isset($_SESSION['username'])) {
-		$_SESSION['msg'] = "You must log in first";
+		$_SESSION['msg'] = "Debes iniciar sesión primero";
 		header('location: login.php');
 	}
 
@@ -102,7 +102,7 @@
       
       <?php
       
-       require('controlador\usuarios_controlador.php');
+       include('controlador\usuarios_controlador.php');
     
        ?>
       </div>

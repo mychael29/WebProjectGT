@@ -5,7 +5,7 @@
 </head>
 <body>
 <?php
-require("../modelo/paginacion.php");
+include("../modelo/paginacion.php");
 ?>
 
 <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
