@@ -33,7 +33,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../css/cssinfoprofile.css">
     <!-- Custom CSS -->
     <link href="../css/shop-item.css" rel="stylesheet">
 
