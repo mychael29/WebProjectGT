@@ -24,7 +24,7 @@ try{
 			file_put_contents($path,base64_decode($image));
 			//$bytesArchivo=file_get_contents($path);//para guardar la imagen en la tabla de la bbdd
 		}else{
-			$url_image = "sin imagen";
+			$url_image = "no imagen";
 		}
         
 		if(!empty($email) && !empty($password) && !empty($nombres)){
