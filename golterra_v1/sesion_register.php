@@ -26,7 +26,7 @@ if (isset($_POST['reg_user'])) {
             $email = $_POST['email'];
             $password_1 = $_POST['password_1'];
             $password_2 = $_POST['password_2'];
-            $image = "sin imagen";
+            $image = "no imagen";
     
             // Validacion del formulario
             if (empty($username)) { array_push($errors, "Username es requerido"); }
