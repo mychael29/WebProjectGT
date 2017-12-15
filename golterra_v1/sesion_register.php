@@ -53,7 +53,7 @@ if (isset($_POST['reg_user'])) {
                     //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
                 }else{
                     //registro
-                    $query = "insert into usuarios (username,email,password,nombres) values (?,?,?,?)";
+                    $query = "insert into usuarios (username,email,password,nombres,photo) values (?,?,?,?,?)";
                     $inserted = $conexion->prepare($query);
                     
                     //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
@@ -61,6 +61,7 @@ if (isset($_POST['reg_user'])) {
                     $inserted->bindParam(2, $email, PDO::PARAM_STR); 
                     $inserted->bindParam(3, $password_1, PDO::PARAM_STR);
                     $inserted->bindParam(4, $nombres, PDO::PARAM_STR);
+                    $inserted->bindParam(4, "sin imagen", PDO::PARAM_STR);
                     
                 
                     
