@@ -61,7 +61,7 @@ if (isset($_POST['reg_user'])) {
                     $inserted->bindParam(2, $email, PDO::PARAM_STR); 
                     $inserted->bindParam(3, $password_1, PDO::PARAM_STR);
                     $inserted->bindParam(4, $nombres, PDO::PARAM_STR);
-                    $inserted->bindParam(4, "sin imagen", PDO::PARAM_STR);
+                    $inserted->bindParam(5, "sin imagen", PDO::PARAM_STR);
                     
                 
                     
