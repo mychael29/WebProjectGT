@@ -202,7 +202,7 @@
       if(empty($persona["photo"])){
         echo "NO";
       }else{
-        if($persona["photo"]=="sin imagen"){
+        if($persona["photo"]=="no imagen"){
           echo "NO";
         }else{
           echo "SI";
