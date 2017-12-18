@@ -1,5 +1,5 @@
 <?php
-include('config.php') ;
+include('../config.php') ;
 try{
     $conexion = new PDO($host,$usernameserver,$passwordserver);
     $conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
