@@ -30,7 +30,7 @@ try{
         
 		if(!empty($ubicacion) && !empty($lat) && !empty($lng)){
 			
-			$query = "Select * from coordenadas_canchas where lat='$lat' and lng='$lng'";
+			$query = "Select * from coordenadas_canchas where cancha_lat='$lat' and cancha_long='$lng'";
             $result = $conexion->prepare($query);
             $result->execute();
             //$result = mysqli_query($this->conexion, $query);
@@ -42,7 +42,7 @@ try{
 				//mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
 			}else{
 				//registro
-                $query = "insert into coordenadas_canchas (lat, lng) values (?,?)";
+                $query = "insert into coordenadas_canchas (cancha_lat, cancha_long) values (?,?)";
 				$inserted_coordenadas = $conexion->prepare($query);
 				//$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
 				$inserted_coordenadas->bindParam(1, $lat, PDO::PARAM_STR); 
@@ -56,14 +56,7 @@ try{
 				$inserted_ubicacion->bindParam(2, $ubicacion, PDO::PARAM_STR); 
 				$inserted_ubicacion->bindParam(3, $photo_cancha, PDO::PARAM_STR);
                 $inserted_ubicacion->execute();
-				/*
-				if($inserted->execute()){
-					$json['success'] = 'Cuenta creada';
-				}else{
-					$json['error'] = 'Se produjo un error';
-				}
-				//$inserted = mysqli_query($this -> conexion, $query);
-				*/
+				
                 $json['valido'] = 'Cancha registrada';
 				echo json_encode($json);
 				//mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
