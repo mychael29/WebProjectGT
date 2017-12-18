@@ -17,9 +17,11 @@ try {
     // Ejecutar sentencia preparada
     $comando->execute();
     // Capturar primera fila del resultado
-    $row = $comando->fetch(PDO::FETCH_ASSOC);
-    $json['coordenadas'][] = $row;
-    $json['coordenadas'][] = $row;
+    //$row = $comando->fetch(PDO::FETCH_ASSOC);
+    while($row = $comando->fetch(PDO::FETCH_ASSOC)){
+        $json['coordenadas'][] = $row;
+    }
+
     echo json_encode($json);
                     
 } catch (PDOException $e) {
