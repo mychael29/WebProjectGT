@@ -18,7 +18,11 @@ try{
 		$ubicacion = $_POST['ubicacion'];
 		$photo_cancha = $_POST['photo_cancha'];
 		
-		
+		$path  = "json/image_cancha/$nombre.jpg"; 
+		$url_image = "image_cancha/".$nombre.".jpg";//agregarle el ID al nombre de la imagen
+		file_put_contents($path,base64_decode($photo_cancha));
+		//$bytesArchivo=file_get_contents($path);//para guardar la imagen en la tabla de la bbdd
+		/*
 		if($photo_cancha!="no_imagen"){
 			$path  = "json/image_cancha/$nombre.jpg"; 
 			$url_image = "image_cancha/".$nombre.".jpg";//agregarle el ID al nombre de la imagen
@@ -27,7 +31,7 @@ try{
 		}else{
 			$url_image = "no_imagen";
 		}
-        
+        */
 		if(!empty($ubicacion) && !empty($lat) && !empty($lng)){
 			
 			$query = "Select * from coordenadas_canchas where cancha_lat='$lat' and cancha_long='$lng'";
@@ -54,7 +58,7 @@ try{
 				//$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
 				$inserted_ubicacion->bindParam(1, $nombre, PDO::PARAM_STR); 
 				$inserted_ubicacion->bindParam(2, $ubicacion, PDO::PARAM_STR); 
-				$inserted_ubicacion->bindParam(3, $photo_cancha, PDO::PARAM_STR);
+				$inserted_ubicacion->bindParam(3, $url_image, PDO::PARAM_STR);
                 $inserted_ubicacion->execute();
 				
                 $json['valido'] = 'Cancha registrada';
