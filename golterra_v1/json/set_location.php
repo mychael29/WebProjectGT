@@ -14,12 +14,14 @@ try{
 	if(isset($_POST['lat'],$_POST['lng'],$_POST['ubicacion'],$_POST['photo_cancha'])) {
 		$lat = $_POST['lat'];
 		$lng = $_POST['lng'];
+		$nombre = $_POST['nombre'];
 		$ubicacion = $_POST['ubicacion'];
-        $photo_cancha = $_POST['photo_cancha'];
+		$photo_cancha = $_POST['photo_cancha'];
+		
 		
 		if($photo_cancha!="no_imagen"){
-			$path  = "json/image_cancha/$ubicacion.jpg"; 
-			$url_image = "image_cancha/".$ubicacion.".jpg";//agregarle el ID al nombre de la imagen
+			$path  = "json/image_cancha/$nombre.jpg"; 
+			$url_image = "image_cancha/".$nombre.".jpg";//agregarle el ID al nombre de la imagen
 			file_put_contents($path,base64_decode($photo_cancha));
 			//$bytesArchivo=file_get_contents($path);//para guardar la imagen en la tabla de la bbdd
 		}else{
@@ -51,7 +53,7 @@ try{
                 $inserted_ubicacion = $conexion->prepare($query);
 				//$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
 				$inserted_ubicacion->bindParam(1, $nombre, PDO::PARAM_STR); 
-				$inserted_ubicacion->bindParam(2, $direccion, PDO::PARAM_STR); 
+				$inserted_ubicacion->bindParam(2, $ubicacion, PDO::PARAM_STR); 
 				$inserted_ubicacion->bindParam(3, $photo_cancha, PDO::PARAM_STR);
                 $inserted_ubicacion->execute();
 				/*
@@ -68,7 +70,8 @@ try{
 			}
 			
 		}else{
-			echo json_encode("No se ha podido registrar la cancha");
+			$json['error'] = 'No se pudo procesar';
+			echo json_encode($json);
 		}
 		
 	}
