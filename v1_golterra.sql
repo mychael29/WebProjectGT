@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-12-2017 a las 17:02:10
+-- Tiempo de generación: 18-12-2017 a las 03:06:51
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `canchas`
+-- Estructura de tabla para la tabla `canchas_afiliadas`
 --
 
-CREATE TABLE `canchas` (
+CREATE TABLE `canchas_afiliadas` (
   `idcancha_` int(9) NOT NULL,
   `nombre` varchar(100) NOT NULL,
   `direccion` varchar(200) NOT NULL,
@@ -38,13 +38,26 @@ CREATE TABLE `canchas` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `canchas_no_afiliados`
+--
+
+CREATE TABLE `canchas_no_afiliados` (
+  `idcancha_` int(9) NOT NULL,
+  `nombre` varchar(200) NOT NULL,
+  `direccion` varchar(200) NOT NULL,
+  `photo_cancha` varchar(200) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `coordenadas_canchas`
 --
 
 CREATE TABLE `coordenadas_canchas` (
   `idcancha_` int(9) NOT NULL,
-  `cancha_long` int(200) NOT NULL,
-  `cancha_lat` int(200) NOT NULL
+  `cancha_long` varchar(200) NOT NULL,
+  `cancha_lat` varchar(200) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -109,9 +122,9 @@ INSERT INTO `usuarios` (`iduser_`, `username`, `email`, `password`, `photo`, `no
 --
 
 --
--- Indices de la tabla `canchas`
+-- Indices de la tabla `canchas_afiliadas`
 --
-ALTER TABLE `canchas`
+ALTER TABLE `canchas_afiliadas`
   ADD PRIMARY KEY (`idcancha_`);
 
 --
@@ -139,9 +152,9 @@ ALTER TABLE `usuarios`
 --
 
 --
--- AUTO_INCREMENT de la tabla `canchas`
+-- AUTO_INCREMENT de la tabla `canchas_afiliadas`
 --
-ALTER TABLE `canchas`
+ALTER TABLE `canchas_afiliadas`
   MODIFY `idcancha_` int(9) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `evento_item`
