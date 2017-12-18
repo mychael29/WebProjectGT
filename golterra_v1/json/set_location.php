@@ -18,6 +18,8 @@ try{
 		$ubicacion = $_POST['ubicacion'];
 		$photo_cancha = $_POST['photo_cancha'];
 		
+
+		// se tiene que insertar foto hasta que se valide
 		$path  = "json/image_cancha/$nombre.jpg"; 
 		$url_image = "image_cancha/".$nombre.".jpg";//agregarle el ID al nombre de la imagen
 		file_put_contents($path,base64_decode($photo_cancha));
