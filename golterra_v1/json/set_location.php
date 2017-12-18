@@ -37,7 +37,7 @@ try{
             
 			if($result->rowCount() == 1){
               
-				$json['invalido'] = 'Ya existe esta ubicacion registrada ';
+				$json['invalido'] = 'Ya existe esta ubicacion registrada';
 				echo json_encode($json);
 				//mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
 			}else{
