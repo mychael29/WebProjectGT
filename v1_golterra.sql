@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-12-2017 a las 05:40:48
+-- Tiempo de generación: 18-12-2017 a las 07:56:36
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -38,6 +38,19 @@ CREATE TABLE `canchas_afiliadas` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `canchas_noafiliadas`
+--
+
+CREATE TABLE `canchas_noafiliadas` (
+  `idcancha_` int(9) NOT NULL,
+  `direccion` varchar(200) NOT NULL,
+  `nombre` varchar(200) NOT NULL,
+  `photo_cancha` varchar(200) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `canchas_no_afiliados`
 --
 
@@ -46,6 +59,18 @@ CREATE TABLE `canchas_no_afiliados` (
   `nombre` varchar(200) NOT NULL,
   `direccion` varchar(200) NOT NULL,
   `photo_cancha` varchar(200) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `coordenadascanchas`
+--
+
+CREATE TABLE `coordenadascanchas` (
+  `idcancha_` int(9) NOT NULL,
+  `cancha_lat` varchar(200) NOT NULL,
+  `cancha_long` varchar(200) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -128,6 +153,12 @@ ALTER TABLE `canchas_afiliadas`
   ADD PRIMARY KEY (`idcancha_`);
 
 --
+-- Indices de la tabla `coordenadascanchas`
+--
+ALTER TABLE `coordenadascanchas`
+  ADD PRIMARY KEY (`idcancha_`);
+
+--
 -- Indices de la tabla `evento_item`
 --
 ALTER TABLE `evento_item`
@@ -155,6 +186,11 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `canchas_afiliadas`
 --
 ALTER TABLE `canchas_afiliadas`
+  MODIFY `idcancha_` int(9) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT de la tabla `coordenadascanchas`
+--
+ALTER TABLE `coordenadascanchas`
   MODIFY `idcancha_` int(9) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `evento_item`
