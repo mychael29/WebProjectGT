@@ -49,7 +49,7 @@ try{
 				$inserted_coordenadas->bindParam(2, $lng, PDO::PARAM_STR);
                 $inserted_coordenadas->execute();
 
-                $query = "insert into canchas_no_afiliadas (nombre, direccion, photo_cancha) values (?,?,?)";
+                $query = "insert into canchas_no_afiliados (nombre, direccion, photo_cancha) values (?,?,?)";
                 $inserted_ubicacion = $conexion->prepare($query);
 				//$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
 				$inserted_ubicacion->bindParam(1, $nombre, PDO::PARAM_STR); 
