@@ -1,6 +1,6 @@
 <?php
 //error_reporting(E_ALL);
-include('config.php') ;
+include('../config.php') ;
 
 try{
     $conexion = new PDO($host,$usernameserver,$passwordserver);
