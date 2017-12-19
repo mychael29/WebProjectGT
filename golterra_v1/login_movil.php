@@ -44,7 +44,7 @@ if(isset($_POST['email'],$_POST['password'])) {
 			echo json_encode($json);
 			//mysqli_close($this -> conexion);
 		}else{
-			$json['error'] = 'Las credenciales de inicio de sesión son incorrectas';
+			$json['success'] = 'Las credenciales de inicio de sesión son incorrectas';
 			echo json_encode($json);
 			//mysqli_close($this->conexion);
 		}
