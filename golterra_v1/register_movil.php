@@ -37,7 +37,7 @@ try{
             
 			if($result->rowCount() == 1){
               
-				$json['error'] = 'Ya existe un usuario con '.$email;
+				$json['success'] = 'Ya existe un usuario con '.$email;
 				echo json_encode($json);
 				//mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
 			}else{
@@ -83,7 +83,7 @@ try{
 					}
 
 				}else{
-					$json['error'] = 'Se produjo un error';
+					$json['success'] = 'Se produjo un error';
 				}
 				echo json_encode($json);
 				//mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
