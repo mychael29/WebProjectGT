@@ -15,10 +15,18 @@ try{
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     // Manejar petición GET
-    $sql_total="SELECT username, email, photo, nombres FROM usuarios";
-	$resultado=$conexion->prepare($sql_total);
-    $resultado->execute(array());
+    $usuarios=array();
+    //$sql_total="SELECT username, email, photo, nombres FROM usuarios";
+	//$resultado=$conexion->prepare($sql_total);
+    //$resultado->execute(array());
 
+    $consulta=$conexion->query("SELECT * FROM usuarios");
+    while($user=$consulta->fetch(PDO::FETCH_ASSOC)){
+        
+        $usuarios[]=$user;
+    }
+    print json_encode($usuarios);
+/*
     if ($resultado->fetch(PDO::FETCH_ASSOC)) {
         $row = $resultado->fetch(PDO::FETCH_ASSOC);
         $json['usuario'][]=$row;
@@ -29,4 +37,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             "mensaje" => "Ha ocurrido un error"
         ));
     }
+    */
 }
