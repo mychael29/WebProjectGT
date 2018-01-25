@@ -3,7 +3,7 @@
  * Representa el la estructura de las Usuarios
  * almacenadas en la base de datos
  */
-require_once("../modelo/conectar.php");
+require_once("database_class.php");
 
 class Users {
     function __construct()
@@ -15,7 +15,7 @@ class Users {
         $consulta = "SELECT * FROM usuarios";
         try {
             // Preparar sentencia
-            $comando = Conectar::conexion()->prepare($consulta);
+            $comando = Database::conexion()->prepare($consulta);
             // Ejecutar sentencia preparada
             $comando->execute();
             return $comando->fetchAll(PDO::FETCH_ASSOC);
@@ -35,7 +35,7 @@ class Users {
         
         try {
             // Preparar sentencia
-            $comando = Conectar::conexion()->prepare($consulta);
+            $comando = Database::conexion()->prepare($consulta);
             // Ejecutar sentencia preparada
             $comando->execute(array($iduser));
             // Capturar primera fila del resultado
@@ -76,7 +76,7 @@ class Users {
             " password)" .
             " VALUES( ?,?,?)";
         // Preparar la sentencia
-        $sentencia = Conectar::conexion()->prepare($comando);
+        $sentencia = Database::conexion()->prepare($comando);
         return $sentencia->execute(
             array(
                 $username,
@@ -95,7 +95,7 @@ class Users {
     public static function delete($iduser)
     {
         // Sentencia DELETE
-        $comando = "DELETE FROM usuarios WHERE iduser=?";
+        $comando = "DELETE FROM usuarios WHERE iduser_=?";
         // Preparar la sentencia
         $sentencia = Database::getInstance()->getDb()->prepare($comando);
         return $sentencia->execute(array($iduser));
