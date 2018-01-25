@@ -3,7 +3,7 @@
  * Clase que envuelve una instancia de la clase PDO
  * para el manejo de la base de datos
  */
-require_once '../config.php';
+ include('../config.php') ;
 class Database
 {
     /**
