@@ -3,7 +3,7 @@
  * Clase que envuelve una instancia de la clase PDO
  * para el manejo de la base de datos
  */
- include('../config.php') ;
+include('config2.php') ;
 class Database
 {
     /**
@@ -42,9 +42,10 @@ class Database
     public function getDb()
     {
         if (self::$pdo == null) {
-            self::$pdo = new PDO($host,$usernameserver,$passwordserver,
+            self::$pdo = new PDO(HOST,USERNAME,PASSWORD,
             array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")
             );
+            
             // Habilitar excepciones
             self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
