@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if ($resultado->fetch(PDO::FETCH_ASSOC)) {
         $row = $resultado->fetch(PDO::FETCH_ASSOC);
         $json['usuario'][]=$row;
-        print json_encode($json);
+        print json_encode(array($json));
     } else {
         print json_encode(array(
             "estado" => 2,
