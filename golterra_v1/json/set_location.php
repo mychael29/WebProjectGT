@@ -17,6 +17,8 @@ try{
 		$nombre = $_POST['nombre'];
 		$ubicacion = $_POST['ubicacion'];
 		$photo_cancha = $_POST['photo_cancha'];
+
+		$coordenada = $_POST['coordenada'];
 		
 
 		if($photo_cancha!="no imagen"){
@@ -56,19 +58,21 @@ try{
 				//mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
 			}else{
 				//registro
-                $query = "insert into coordenadas_canchas (cancha_lat, cancha_long) values (?,?)";
+                $query = "insert into coordenadas_canchas (cancha_lat, cancha_long, lugar) values (?,?,?)";
 				$inserted_coordenadas = $conexion->prepare($query);
 				//$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
 				$inserted_coordenadas->bindParam(1, $lat, PDO::PARAM_STR); 
 				$inserted_coordenadas->bindParam(2, $lng, PDO::PARAM_STR);
+				$inserted_coordenadas->bindParam(3, $coordenada, PDO::PARAM_STR);
                 $inserted_coordenadas->execute();
 
-                $query = "insert into canchas_no_afiliados (nombre, direccion, photo_cancha) values (?,?,?)";
+                $query = "insert into canchas_no_afiliados (nombre, direccion, photo_cancha, lugar) values (?,?,?,?)";
                 $inserted_ubicacion = $conexion->prepare($query);
 				//$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
 				$inserted_ubicacion->bindParam(1, $nombre, PDO::PARAM_STR); 
 				$inserted_ubicacion->bindParam(2, $ubicacion, PDO::PARAM_STR); 
 				$inserted_ubicacion->bindParam(3, $url_image, PDO::PARAM_STR);
+				$inserted_ubicacion->bindParam(3, $coordenada, PDO::PARAM_STR);
                 $inserted_ubicacion->execute();
 				
                 $json['valido'] = 'Cancha registrada';
