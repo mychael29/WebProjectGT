@@ -72,7 +72,7 @@ try{
 				$inserted_ubicacion->bindParam(1, $nombre, PDO::PARAM_STR); 
 				$inserted_ubicacion->bindParam(2, $ubicacion, PDO::PARAM_STR); 
 				$inserted_ubicacion->bindParam(3, $url_image, PDO::PARAM_STR);
-				$inserted_ubicacion->bindParam(3, $coordenada, PDO::PARAM_STR);
+				$inserted_ubicacion->bindParam(4, $coordenada, PDO::PARAM_STR);
                 $inserted_ubicacion->execute();
 				
                 $json['valido'] = 'Cancha registrada';
