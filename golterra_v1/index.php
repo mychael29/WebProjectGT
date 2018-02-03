@@ -173,7 +173,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 text-center">
-      <h2>Programador: Maycol J. Meza Roque</h2>
+      <h2>Web de Maycol J. Meza Roque</h2>
         <h1>Actividades futbolisticas</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, magni, doloribus, possimus eum sapiente deleniti doloremque fugit ut expedita molestiae iusto debitis eveniet modi obcaecati ipsam quos quis labore dicta.</p>
       </div>
