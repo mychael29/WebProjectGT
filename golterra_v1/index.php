@@ -330,10 +330,10 @@
 <div class="col-lg-4 col-md-4">
   <h3 class="text-center">GET IN TOUCH</h3>
       <address class="text-center">
-<strong>Gol... , Inc.</strong><br>
+<strong>Meza Roque Maycol Jhunior , Inc.</strong><br>
 Lima Metropolitana, Santa Anita,<br>
-11111-1111, PERÚ<br>
-<abbr title="Phone">P:</abbr> (51) 111-1111
++51 962 786 921, PERÚ<br>
+<abbr title="Phone">P:</abbr> (51) ....-....
 </address>
 </div>
 <div class="col-lg-4 col-md-4">
