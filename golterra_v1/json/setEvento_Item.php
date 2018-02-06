@@ -42,7 +42,7 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           $inserted_coordenadas->bindParam(5, $distrito, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(6, $tipo, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(7, $cancha_name, PDO::PARAM_STR);
-          $inserted_coordenadas->bindParam(8, $photo_url_cancha, PDO::PARAM_STR);
+          $inserted_coordenadas->bindParam(8, $photo_cancha, PDO::PARAM_STR);
           $inserted_coordenadas->execute();
         
           $json['sucess'] = 'Evento registrado';
