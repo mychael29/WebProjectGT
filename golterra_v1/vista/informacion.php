@@ -155,14 +155,14 @@
 </section>
 <h3>Proyecto PHP-MySQP-Android</h3>
 <br>
-<h5>Buenas, este proyecto es para hacer las pruebas del funcionamiento de una App que estoy desarrollando.</h5>
-<h5>Esta Web es solo para regitrarse e iniciar sesion, y una seccion donde hay una lista de los usuarios que</h5>
-<h5>se han registraron sea por la web o por el aplicativo movil, tambien se puede modificar o editar la información</h5>
-<h5>de los usuarios, y un perfil simple para el quien inicio sesion.</h5>
-<h5>Las demas funciones estan para uso exclusivo de la aplicacion movil, pronto ordenare e implementare mas codigo</h5>
-<h5>para la plataforma web, para darle mas funcionalidad y deje de servir de solo prueba.</h5>
-<br>
-<h5>GitHub:</h5> <h5 href="https://github.com/mychael29"> https://github.com/mychael29.</h5>
+<h6>Buenas, este proyecto es para hacer las pruebas del funcionamiento de una App que estoy desarrollando.</h6>
+<h6>Esta Web es solo para regitrarse e iniciar sesion, y donde hay una lista de los usuarios que se han </h6>
+<h6>registrado sea por la web o por el aplicativo movil, tambien se puede modificar o editar la información</h6>
+<h6>de los usuarios, y un perfil simple para el quien inicio sesion.</h6>
+<h6>Las demas funciones estan para uso exclusivo de la aplicativo movil, pronto ordenare e implementare mas codigo</h6>
+<h6>para la plataforma web, para darle mas funcionalidad y deje de servir de solo prueba.</h6>
+<h6>
+<h6>GitHub:<a href="https://github.com/mychael29"> https://github.com/mychael29</a></h6>
 
 <br>
 <br>
