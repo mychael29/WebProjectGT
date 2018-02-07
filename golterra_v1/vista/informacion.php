@@ -14,7 +14,7 @@
 	if (isset($_GET['logout'])) {
 		session_destroy();
 		unset($_SESSION['username']);
-		header("location: index.php");
+		header("location: ../index.php");
   }
 
 ?>
@@ -48,13 +48,13 @@
   
       <ul class="nav navbar-nav">
         <li><a href="#">Que hace Mi Proyecto<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Información</a></li>
-        <li><a href="vista/store_index.php">Tienda</a></li>
+        <li><a href="informacion.php">Información</a></li>
+        <li><a href="store_index.php">Tienda</a></li>
         <li class="dropdown"></span><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Mas <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Administrador</a></li>
             <li><a href="#">Organizador</a></li>
-            <li><a href="index_users.php">Jugadores</a></li>
+            <li><a href="../index_users.php">Jugadores</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Reglas</a></li>
             <li role="separator" class="divider"></li>
@@ -96,7 +96,7 @@
                                                             <?php echo $_SESSION['username']['email']; ?></p>
                                                             <div class="divider">
                                                             </div>
-                                                            <a href='vista/user_profile.php' class="btn btn-primary btn-sm active">Ver Perfil</a>
+                                                            <a href='user_profile.php' class="btn btn-primary btn-sm active">Ver Perfil</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -107,7 +107,7 @@
                                                                 <a href="#" class="btn btn-default btn-sm">Cambiar Passowrd</a>
                                                             </div>
                                                             <div class="col-md-6">
-                                                                <a href="index.php?logout='1'" class="btn btn-default btn-sm pull-right">Sign Out</a>
+                                                                <a href="../index.php?logout='1'" class="btn btn-default btn-sm pull-right">Sign Out</a>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -126,8 +126,8 @@
 		    <?php endif ?>
 
         <?php  if (!isset($_SESSION['username'])) : ?>
-        <li><a href="login.php">Iniciar sesión</a></li>
-        <li><a href="register.php">Registrarse</a></li>
+        <li><a href="../login.php">Iniciar sesión</a></li>
+        <li><a href="../register.php">Registrarse</a></li>
 		    <?php endif ?>
         </ul>
       </li>
@@ -150,21 +150,31 @@
 
 
 <br>
-
-  
+<br>
+<br>
 </section>
+<h3>Proyecto PHP-MySQP-Android</h3>
+<br>
+<h5>Buenas, este proyecto es para hacer las pruebas del funcionamiento de una App que estoy desarrollando.</h5>
+<h5>Esta Web es solo para regitrarse e iniciar sesion, y una seccion donde hay una lista de los usuarios que</h5>
+<h5>se han registraron sea por la web o por el aplicativo movil, tambien se puede modificar o editar la información</h5>
+<h5>de los usuarios, y un perfil simple para el quien inicio sesion.</h5>
+<h5>Las demas funciones estan para uso exclusivo de la aplicacion movil, pronto ordenare e implementare mas codigo</h5>
+<h5>para la plataforma web, para darle mas funcionalidad y deje de servir de solo prueba.</h5>
+<br>
+<h5>GitHub:</h5> <h5 href="https://github.com/mychael29"> https://github.com/mychael29.</h5>
 
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <h1>Lorem ipsum dolor sit amet</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, magni, doloribus, possimus eum sapiente deleniti doloremque fugit ut expedita molestiae iusto debitis eveniet modi obcaecati ipsam quos quis labore dicta.</p>
-		<button type="button" class="btn btn-success">Get in touch</button>
-      </div>
-    </div>
-  </div>
-</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <hr>
 <div class="section well">
 <div class="container">

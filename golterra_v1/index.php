@@ -48,7 +48,7 @@
   
       <ul class="nav navbar-nav">
         <li><a href="#">Que hace Mi Proyecto<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Información</a></li>
+        <li><a href="vista/informacion.php">Información</a></li>
         <li><a href="vista/store_index.php">Tienda</a></li>
         <li class="dropdown"></span><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Mas <span class="caret"></span></a>
           <ul class="dropdown-menu">
