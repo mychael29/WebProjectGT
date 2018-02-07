@@ -33,12 +33,12 @@
   <div class="container"> 
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myDefaultNavbar1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="../index.php">GOL...</a> </div>
+      <a class="navbar-brand" href="../index.php">Mi Proyecto</a> </div>
     <div class="collapse navbar-collapse" id="myDefaultNavbar1">
      
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Que hace Gol...<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Video</a></li>
+        <li class="active"><a href="#">Que hace Mi Proyecto<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Información</a></li>
         <li><a href="store_index.php">Tienda</a></li>
         <li class="dropdown"></span><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">Mas <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -194,7 +194,7 @@
                 <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i>
 
                 </div>
-                <div class="panel-body"><a href="https://www.facebook.com/mychael29" class="">facebook.com/mychael29</a>
+                <div class="panel-body"><a href="" class="">...</a>
 
                 </div>
             </div>
@@ -317,7 +317,7 @@ Lima Metropolitana, Santa Anita,<br>
 <div class="container">
 <div class="row">
   <div class="col-xs-12">
-    <p>Copyright © Gol... . All rights reserved.</p>
+    <p>Copyright © Maycol Meza Roque.</p>
   </div>
 </div>
 </div>
