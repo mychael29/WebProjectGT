@@ -30,8 +30,8 @@
 <title>Proyecto MySQL-Android</title>
 
 <!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/cssinfoprofile.css">
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/cssinfoprofile.css">
 
 
 </head>
@@ -216,7 +216,7 @@ Lima Metropolitana, Santa Anita,<br>
 </div>
 </footer>
 
-<script src="js/jquery-1.11.3.min.js"></script> 
-<script src="js/bootstrap.js"></script>
+<script src="../js/jquery-1.11.3.min.js"></script> 
+<script src="../js/bootstrap.js"></script>
 </body>
 </html>
