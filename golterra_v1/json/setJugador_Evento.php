@@ -37,9 +37,9 @@ if(true) {
           $query = "insert into jugadores_evento (id_evento,nombres,id_usuario,rango,experiencia,url_photo,equipo) values (?,?,?,?,?,?.?)";
           $inserted_coordenadas = $conexion->prepare($query);
           //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
-          $inserted_coordenadas->bindParam(1, $id_evento, PDO::PARAM_STR); 
+          $inserted_coordenadas->bindParam(1, $id_evento, PDO::PARAM_INT); 
           $inserted_coordenadas->bindParam(2, $nombres, PDO::PARAM_STR);
-          $inserted_coordenadas->bindParam(3, $id_usuario, PDO::PARAM_STR);
+          $inserted_coordenadas->bindParam(3, $id_usuario, PDO::PARAM_INT);
           $inserted_coordenadas->bindParam(4, $rango, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(5, $experiencia, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(6, $url_photo, PDO::PARAM_STR);
