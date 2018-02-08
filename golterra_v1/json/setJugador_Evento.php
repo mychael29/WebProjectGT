@@ -29,7 +29,7 @@ if(true) {
     $json['success'] = 'antes del if';
     echo json_encode($json);
     
-    if($result->rowCount() == 1||$result->rowCount()==null){
+    if($result->rowCount() == 1||$result->rowCount()!=null){
         
           $json['success'] = 'Ya estas apuntado al partido';
           echo json_encode($json);
