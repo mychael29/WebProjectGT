@@ -25,11 +25,10 @@ if(true) {
     $query = "Select * from jugadores_evento where id_evento = ? and id_usuario = ?";
     $result = $conexion->prepare($query);
     $result->execute(array($id_evento,$id_usuario));
-    echo "Value is " . $result->rowCount();
 
     if($result->rowCount() > 0){
         
-          $json['success'] = 'Ya estas apuntado al partido';
+          $json['success'][] = 'Ya estas apuntado al partido';
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }else{
@@ -49,7 +48,7 @@ if(true) {
           $inserted_coordenadas->bindParam(7, $equipo, PDO::PARAM_STR);
           $inserted_coordenadas->execute();
         */
-          $json['success'] = 'Apuntado';
+          $json['success'][] = 'Apuntado';
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }
