@@ -21,7 +21,7 @@ if(isset($_POST['id_evento'],$_POST['nombres'],$_POST['id_usuario'],$_POST['url_
     $equipo = $_POST['equipo'];
 
     //FALTA EL TITULO Y DESCRIPCION
-    $query = "Select * from jugadores_evento where id_evento=$id_evento and id_usuario=$id_usuario";
+    $query = "Select * from jugadores_evento where id_evento = $id_evento and id_usuario = $id_usuario";
     $result = $conexion->prepare($query);
     $result->execute();
 
