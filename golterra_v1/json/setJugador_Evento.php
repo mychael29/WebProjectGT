@@ -27,7 +27,7 @@ if(true) {
     //$result->execute();
 
     If($result->execute()){
-        $query = "insert into jugadores_evento (id_evento,nombres,id_usuario,rango,experiencia,url_photo,equipo) values (*,?,*,?,?,?.?)";
+        $query = "insert into jugadores_evento (id_evento,nombres,id_usuario,rango,experiencia,url_photo,equipo) values (?,?,?,?,?,?.?)";
         $inserted_coordenadas = $conexion->prepare($query);
         //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
         $inserted_coordenadas->bindParam(1, $id_evento, PDO::PARAM_INT); 
