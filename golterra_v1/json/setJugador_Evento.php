@@ -14,6 +14,7 @@ if(isset($_POST['id_evento'],$_POST['nombres'],$_POST['id_usuario'],$_POST['url_
     $id_evento = (int) $id_evento;
     $nombres = $_POST['nombres'];
     $id_usuario = $_POST['id_usuario'];
+    $id_usuario = (int) $id_usuario;
     $rango = $_POST['rango'];
     $experiencia = $_POST['experiencia'];
     $url_photo = $_POST['url_photo'];
