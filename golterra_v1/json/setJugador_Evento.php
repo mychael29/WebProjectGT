@@ -20,13 +20,32 @@ if(true) {
     $experiencia = $_POST['experiencia'];
     $url_photo = $_POST['url_photo'];
     $equipo = $_POST['equipo'];
-    $json['success'] = 'Ya estas apuntado al partido';
-    echo json_encode($json);
+   
     //FALTA EL TITULO Y DESCRIPCION
     $query = "Select * from jugadores_evento where id_evento = $id_evento and id_usuario = $id_usuario";
     $result = $conexion->prepare($query);
-    $result->execute();
+    //$result->execute();
 
+    If($result->execute()){
+        $json['success'] = 'Ya estas apuntado al partido';
+        echo json_encode($json);
+    }else{
+        $query = "insert into jugadores_evento (id_evento,nombres,id_usuario,rango,experiencia,url_photo,equipo) values (*,?,*,?,?,?.?)";
+        $inserted_coordenadas = $conexion->prepare($query);
+        //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
+        $inserted_coordenadas->bindParam(1, $id_evento, PDO::PARAM_INT); 
+        $inserted_coordenadas->bindParam(2, $nombres, PDO::PARAM_STR);
+        $inserted_coordenadas->bindParam(3, $id_usuario, PDO::PARAM_INT);
+        $inserted_coordenadas->bindParam(4, $rango, PDO::PARAM_STR);
+        $inserted_coordenadas->bindParam(5, $experiencia, PDO::PARAM_STR);
+        $inserted_coordenadas->bindParam(6, $url_photo, PDO::PARAM_STR);
+        $inserted_coordenadas->bindParam(7, $equipo, PDO::PARAM_STR);
+        $inserted_coordenadas->execute();
+      
+        $json['success'] = 'Apuntado';
+        echo json_encode($json);
+    }
+    /*
     if($result->rowCount() == 1){
         
           $json['success'] = 'Ya estas apuntado al partido';
@@ -50,7 +69,7 @@ if(true) {
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }
-
+*/
     
 }
 
