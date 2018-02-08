@@ -20,7 +20,10 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
     $cancha_name = $_POST['cancha_name'];
     $latlng = $_POST['latlng'];
     $photo_cancha = $_POST['photo_cancha'];
-    //FALTA EL TITULO Y DESCRIPCION
+
+    $titulo = $_POST['titulo'];
+    $descripcion = $_POST['descripcion'];
+
     $query = "Select * from evento_prueba where latlng='$latlng'";
     $result = $conexion->prepare($query);
     $result->execute();
@@ -32,7 +35,7 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }else{
           //registro
-          $query = "insert into evento_prueba (latlng, name_organizador,fecha,hora,distrito,tipo,cancha_name,photo_url_cancha) values (?,?,?,?,?,?,?,?)";
+          $query = "insert into evento_prueba (latlng, name_organizador,fecha,hora,distrito,tipo,cancha_name,photo_url_cancha,titulo,descripcion) values (?,?,?,?,?,?,?,?,?,?)";
           $inserted_coordenadas = $conexion->prepare($query);
           //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
           $inserted_coordenadas->bindParam(1, $latlng, PDO::PARAM_STR); 
@@ -43,6 +46,8 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           $inserted_coordenadas->bindParam(6, $tipo, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(7, $cancha_name, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(8, $photo_cancha, PDO::PARAM_STR);
+          $inserted_coordenadas->bindParam(9, $titulo, PDO::PARAM_STR);
+          $inserted_coordenadas->bindParam(10, $descripcion, PDO::PARAM_STR);
           $inserted_coordenadas->execute();
 
           $query2 = "select * from evento_prueba where latlng='$latlng'";
@@ -50,7 +55,7 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           $result2->execute();
           $row = $result2->fetch(PDO::FETCH_ASSOC);
           $json['evento registrado'][]=$row;
-
+          
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }
