@@ -34,7 +34,7 @@ if(true) {
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }else{
           //registro
-          $query = "insert into jugadores_evento (id_evento,nombres,id_usuario,rango,experiencia,url_photo,equipo) values (*,?,*,?,?,?.?)";
+          $query = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) values (?,?,?,?,?,?.?)";
           $insert = $conexion->prepare($query);
           $insert->execute(array($id_evento,$nombres,$id_usuario,$rango,$experiencia,$url_photo,$equipo));
           /*
