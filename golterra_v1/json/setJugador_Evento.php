@@ -11,17 +11,17 @@ try{
 
 if(isset($_POST['id_evento'],$_POST['nombres'],$_POST['id_usuario'],$_POST['url_photo'],$_POST['equipo'])) {
     $id_evento = $_POST['id_evento'];
-    //$id_evento = (int) $id_evento;
+    $id_evento = (int) $id_evento;
     $nombres = $_POST['nombres'];
     $id_usuario = $_POST['id_usuario'];
-    //$id_usuario = (int) $id_usuario;
+    $id_usuario = (int) $id_usuario;
     $rango = $_POST['rango'];
     $experiencia = $_POST['experiencia'];
     $url_photo = $_POST['url_photo'];
     $equipo = $_POST['equipo'];
 
     //FALTA EL TITULO Y DESCRIPCION
-    $query = "Select * from jugadores_evento where id_evento='$id_evento' and id_usuario='$id_usuario'";
+    $query = "Select * from jugadores_evento where id_evento = $id_evento and id_usuario = $id_usuario";
     $result = $conexion->prepare($query);
     $result->execute();
 
