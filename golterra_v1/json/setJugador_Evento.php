@@ -34,9 +34,10 @@ if(true) {
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }else{
           //registro
-          $query = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) values (?,?,?,?,?,?.?)";
+          $query = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
+          values ($id_evento,'$nombres',$id_usuario,'$rango','$experiencia','$url_photo','$equipo')";
           $insert = $conexion->prepare($query);
-          $insert->execute(array($id_evento,$nombres,$id_usuario,$rango,$experiencia,$url_photo,$equipo));
+          $insert->execute();
           /*
           //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
           $inserted_coordenadas->bindParam(1, $id_evento, PDO::PARAM_INT); 
