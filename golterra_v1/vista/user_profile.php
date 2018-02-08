@@ -182,10 +182,10 @@
             <!--left col-->
             <ul class="list-group">
                 <li class="list-group-item text-muted" contenteditable="false">Perfil</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Se unio</strong></span> 10/11/2017</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong class="">Se unio</strong></span> No definido</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong class="">Ultima vez visto</strong></span> No definido</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Nombre real</strong></span> Maycol Meza Roque</li>
-              <li class="list-group-item text-right"><span class="pull-left"><strong class="">Rol principal: </strong></span> Arquero
+                    <li class="list-group-item text-right"><span class="pull-left"><strong class="">Nombre real</strong></span> No definido</li>
+              <li class="list-group-item text-right"><span class="pull-left"><strong class="">Rol principal: </strong></span> No definido
                
                       </li>
             </ul>

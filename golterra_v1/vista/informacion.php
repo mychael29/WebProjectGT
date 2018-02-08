@@ -42,7 +42,7 @@
    
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myDefaultNavbar1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.php">Mi Proyecto</a> </div>
+      <a class="navbar-brand" href="../index.php">Mi Proyecto</a> </div>
 
     <div class="collapse navbar-collapse" id="myDefaultNavbar1">
   
@@ -157,7 +157,7 @@
 <br>
 <br>
 <div class="container">
-<h3>Proyecto PHP-MySQP-Android</h3>
+<h3>Proyecto PHP-MySQL-Android</h3>
 <br>
 <h6>Buenas, este proyecto es para hacer las pruebas del funcionamiento de una App en android que estoy desarrollando.</h6>
 <h6>Esta Web es solo para registrarse e iniciar sesión, y donde hay una lista de los usuarios que se han</h6>
