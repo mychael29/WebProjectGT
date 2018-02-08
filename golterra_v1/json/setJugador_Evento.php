@@ -24,11 +24,8 @@ if(true) {
     //FALTA EL TITULO Y DESCRIPCION
     $query = "Select * from jugadores_evento where id_evento = ? and id_usuario = ?";
     $result = $conexion->prepare($query);
-    $result->execute(array(
-        $id_evento,
-        $id_usuario
-    ));
-
+    $result->execute(array($id_evento,$id_usuario));
+    echo "Value is " . $result->rowCount();
     $json['success'] = 'antes del if';
     echo json_encode($json);
     if($result->rowCount() == 1){
