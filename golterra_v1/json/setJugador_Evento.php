@@ -27,7 +27,7 @@ if(isset($_POST['id_evento'],$_POST['nombres'],$_POST['id_usuario'],$_POST['url_
 
     if($result->rowCount() == 1){
         
-          $json['sucess'] = 'Ya estar apuntado al partido';
+          $json['success'] = 'Ya estar apuntado al partido';
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }else{
@@ -41,10 +41,10 @@ if(isset($_POST['id_evento'],$_POST['nombres'],$_POST['id_usuario'],$_POST['url_
           $inserted_coordenadas->bindParam(4, $rango, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(5, $experiencia, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(6, $url_photo, PDO::PARAM_STR);
-          $inserted_coordenadas->bindParam(6, $equipo, PDO::PARAM_STR);
+          $inserted_coordenadas->bindParam(7, $equipo, PDO::PARAM_STR);
           $inserted_coordenadas->execute();
         
-          $json['sucess'] = 'Apuntado';
+          $json['success'] = 'Apuntado';
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }
