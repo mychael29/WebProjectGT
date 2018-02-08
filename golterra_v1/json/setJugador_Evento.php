@@ -26,9 +26,9 @@ if(true) {
     $result = $conexion->prepare($query);
     $result->execute(array($id_evento,$id_usuario));
     echo "Value is " . $result->rowCount();
-    $json['success'] = 'antes del if';
+
     echo json_encode($json);
-    if($result->rowCount() == 1){
+    if($result->rowCount() > 0){
         
           $json['success'] = 'Ya estas apuntado al partido';
           echo json_encode($json);
