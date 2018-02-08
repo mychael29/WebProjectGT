@@ -11,6 +11,7 @@ try{
 
 if(isset($_POST['id_evento'],$_POST['nombres'],$_POST['id_usuario'],$_POST['url_photo'],$_POST['equipo'])) {
     $id_evento = $_POST['id_evento'];
+    $id_evento = (int) $id_evento;
     $nombres = $_POST['nombres'];
     $id_usuario = $_POST['id_usuario'];
     $rango = $_POST['rango'];
