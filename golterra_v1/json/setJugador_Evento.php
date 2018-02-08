@@ -21,13 +21,13 @@ if(isset($_POST['id_evento'],$_POST['nombres'],$_POST['id_usuario'],$_POST['url_
     $equipo = $_POST['equipo'];
 
     //FALTA EL TITULO Y DESCRIPCION
-    $query = "Select * from jugadores_evento where id_evento='$id_evento' and id_usuario='$id_usuario'";
+    $query = "Select * from jugadores_evento where id_evento=$id_evento and id_usuario=$id_usuario";
     $result = $conexion->prepare($query);
     $result->execute();
 
     if($result->rowCount() == 1){
         
-          $json['success'] = 'Ya estar apuntado al partido';
+          $json['success'] = 'Ya estas apuntado al partido';
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }else{
