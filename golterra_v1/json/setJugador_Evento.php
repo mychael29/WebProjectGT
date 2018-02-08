@@ -10,6 +10,7 @@ try{
 }
 
 if(true) {
+    //isset($_POST['id_evento'],$_POST['nombres'],$_POST['id_usuario'],$_POST['url_photo'],$_POST['equipo'])
     $id_evento = $_POST['id_evento'];
     $id_evento = (int) $id_evento;
     $nombres = $_POST['nombres'];
@@ -19,7 +20,8 @@ if(true) {
     $experiencia = $_POST['experiencia'];
     $url_photo = $_POST['url_photo'];
     $equipo = $_POST['equipo'];
-
+    $json['success'] = 'Ya estas apuntado al partido';
+    echo json_encode($json);
     //FALTA EL TITULO Y DESCRIPCION
     $query = "Select * from jugadores_evento where id_evento = $id_evento and id_usuario = $id_usuario";
     $result = $conexion->prepare($query);
