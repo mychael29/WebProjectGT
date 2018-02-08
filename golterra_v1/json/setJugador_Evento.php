@@ -9,7 +9,7 @@ try{
     echo "Linea del error " . $e->getLine();
 }
 
-if(isset($_POST['id_evento'],$_POST['nombres'],$_POST['id_usuario'],$_POST['url_photo'],$_POST['equipo'])) {
+if(true) {
     $id_evento = $_POST['id_evento'];
     $id_evento = (int) $id_evento;
     $nombres = $_POST['nombres'];
