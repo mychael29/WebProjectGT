@@ -27,9 +27,6 @@ if(true) {
     //$result->execute();
 
     If($result->execute()){
-        $json['success'] = 'Ya estas apuntado al partido';
-        echo json_encode($json);
-    }else{
         $query = "insert into jugadores_evento (id_evento,nombres,id_usuario,rango,experiencia,url_photo,equipo) values (*,?,*,?,?,?.?)";
         $inserted_coordenadas = $conexion->prepare($query);
         //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
@@ -43,6 +40,10 @@ if(true) {
         $inserted_coordenadas->execute();
       
         $json['success'] = 'Apuntado';
+        echo json_encode($json);
+    }else{
+        
+        $json['success'] = 'Ya estas apuntado al partido';
         echo json_encode($json);
     }
     /*
