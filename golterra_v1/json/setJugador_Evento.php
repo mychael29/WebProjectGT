@@ -35,7 +35,9 @@ if(true) {
     }else{
           //registro
           $query = "insert into jugadores_evento (id_evento,nombres,id_usuario,rango,experiencia,url_photo,equipo) values (*,?,*,?,?,?.?)";
-          $inserted_coordenadas = $conexion->prepare($query);
+          $insert = $conexion->prepare($query);
+          $insert->execute(array($id_evento,$nombres,$id_usuario,$rango,$experiencia,$url_photo,$equipo));
+          /*
           //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
           $inserted_coordenadas->bindParam(1, $id_evento, PDO::PARAM_INT); 
           $inserted_coordenadas->bindParam(2, $nombres, PDO::PARAM_STR);
@@ -45,7 +47,7 @@ if(true) {
           $inserted_coordenadas->bindParam(6, $url_photo, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(7, $equipo, PDO::PARAM_STR);
           $inserted_coordenadas->execute();
-        
+        */
           $json['success'] = 'Apuntado';
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
