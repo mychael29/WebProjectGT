@@ -48,7 +48,7 @@ if(true) {
           $inserted_coordenadas->bindParam(7, $equipo, PDO::PARAM_STR);
           $inserted_coordenadas->execute();
         */
-          $json['success'][] = 'Apuntado';
+          $json['success'][] = 'Apuntado'; //sale entre corchetes y comillas, arreglarlo
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }
