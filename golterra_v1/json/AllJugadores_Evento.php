@@ -12,9 +12,20 @@ try{
 }
 
 if(isset($_POST['id_evento'])){
+    $jugadores=array();
     $id_evento = $_POST['id_evento'];
     $query = "Select * from jugadores_evento where id_evento='$id_evento'";
     $result = $conexion->prepare($query);
+
+    while($jugador=$result->fetch(PDO::FETCH_ASSOC)){
+        
+        $jugadores[]=$jugador;
+    }
+
+    print json_encode($jugadores);
+
+    /*
+
     $result->execute();
     
     if($result->rowCount() > 0){
@@ -27,6 +38,7 @@ if(isset($_POST['id_evento'])){
     }else{
         $json['error'] = 'No hay jugadores apuntados aun';
     }    
+    */
 }
 
 	
