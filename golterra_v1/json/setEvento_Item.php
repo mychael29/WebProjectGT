@@ -58,6 +58,26 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           $result2 = $conexion->prepare($query2);
           $result2->execute();
           $row = $result2->fetch(PDO::FETCH_ASSOC);
+
+          // OBTENIENDO EL ID DEL EVENTO CREADO
+          $query3 = "select id_event from evento_prueba where latlng='$latlng'";
+          $result3 = $conexion->prepare($query3);
+          $result3->execute();
+          $row2 = $result3->fetch(PDO::FETCH_ASSOC);
+
+
+          // CREANDO CUPOS DISPONIBLES DEL EVENTO
+          $tipo = (int)$tipo * 2;
+          while($tipo > 0){
+            $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
+            values ($row2,'DISPONIBLE',0,'','','https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
+            $insert = $conexion->prepare($queryCreandoCupos);
+            $insert->execute();
+            $tipo = $tipo - 1;
+          }
+          
+
+          // DEVOLVIENDO DATOS DEL EVENTO CREADO
           $json['evento registrado'][]=$row;
           
           echo json_encode($json);
