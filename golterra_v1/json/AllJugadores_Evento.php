@@ -16,7 +16,8 @@ if(isset($_POST['id_evento'])){
     $id_evento = $_POST['id_evento'];
     $query = "Select * from jugadores_evento where id_evento='$id_evento'";
     $result = $conexion->prepare($query);
-
+    $result->execute();
+    
     while($jugador=$result->fetch(PDO::FETCH_ASSOC)){
         
         $jugadores[]=$jugador;
