@@ -59,29 +59,25 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           $result2->execute();
           $row = $result2->fetch(PDO::FETCH_ASSOC);
 
-          // OBTENIENDO EL ID DEL EVENTO CREADO
-          $query3 = "select id_event from evento_prueba where latlng='$latlng'";
-          $result3 = $conexion->prepare($query3);
-          $result3->execute();
-          $row2 = $result3->fetch(PDO::FETCH_ASSOC);
-          $row2 = (int)$row2;
           // CREANDO CUPOS DISPONIBLES DEL EVENTO
-          $tipo = (int)$tipo * 2;
           $posicion = 1;
-          for ($i = 0; i < $tipo; $i++ ){
+          $IDevento = $row['id_event'];
+          $TipoPartido = $row['tipo'];
+
+          for ($i=0; i<($TipoPartido*2); $i++){
               $n = $i + 1;
               if($n%2==0){
                 $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
-                values ($row2,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
-                $posicion = $posicion + 1;
+                values ($IDevento,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
+                $posicion++;
                 $insert = $conexion->prepare($queryCreandoCupos);
                 $insert->execute();
                }else{
                 $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
-                values ($row2,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
+                values ($IDevento,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
                 $insert = $conexion->prepare($queryCreandoCupos);
                 $insert->execute();
-               } 
+               }
           }
           
 
