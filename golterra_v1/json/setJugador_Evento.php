@@ -36,7 +36,7 @@ if(true) {
           //registro
           // CAMBIARLO A UN UPDATE ... WHERE experiencia = 1 && equipo = 'a'.. LOS VALORES VENDRA POR EL ANDROID Y POR DEFECTO EL ORGANIZADOR EL 1 Y EL 'a'
           //implementar un 2 valores mas que vengan del android, para experiencia(definira la posicion del jugador) y rango(definira si es equipo a o b, impar = a y par = b)
-          $query = "update jugadores_evento set id_event=$id_evento, nombres='$nombres', id_usuario=$id_usuario, rango='$rango', experiencia='$experiencia', url_photo='$url_photo', equipo=$equipo, posicion=$posicion
+          $query = "update jugadores_evento set id_event=$id_evento, nombres='$nombres', id_usuario=$id_usuario, rango='$rango', experiencia='$experiencia', url_photo='$url_photo', posicion=$posicion
           where equipo=$equipo";
           /*
           (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) experiencia
