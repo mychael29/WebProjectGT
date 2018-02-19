@@ -20,6 +20,7 @@ if(true) {
     $experiencia = $_POST['experiencia'];
     $url_photo = $_POST['url_photo'];
     $equipo = $_POST['equipo'];
+    $posicion = $_POST['posicion'];
    
     //FALTA EL TITULO Y DESCRIPCION
     $query = "Select * from jugadores_evento where id_evento = ? and id_usuario = ?";
@@ -34,8 +35,13 @@ if(true) {
     }else{
           //registro
           // CAMBIARLO A UN UPDATE ... WHERE experiencia = 1 && equipo = 'a'.. LOS VALORES VENDRA POR EL ANDROID Y POR DEFECTO EL ORGANIZADOR EL 1 Y EL 'a'
-          $query = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
-          values ($id_evento,'$nombres',$id_usuario,'$rango','$experiencia','$url_photo','$equipo')";
+          //implementar un 2 valores mas que vengan del android, para experiencia(definira la posicion del jugador) y rango(definira si es equipo a o b, impar = a y par = b)
+          $query = "update jugadores_evento set id_event=$id_evento, nombres='$nombres', id_usuario=$id_usuario, rango='$rango', experiencia='$experiencia', url_photo='$url_photo', equipo='$equipo', posicion='$posicion'
+          where equipo='$equipo'";
+          /*
+          (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) experiencia
+          values ($id_evento,'$nombres',$id_usuario,'$rango','$experiencia','$url_photo','$equipo','$posicion')";
+          */
           $insert = $conexion->prepare($query);
           $insert->execute();
           

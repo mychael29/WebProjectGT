@@ -70,8 +70,8 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           //NO FUNCIONA, HACE UN BUCLE DE 1000
           $i=1;
           while($i<=$limitFor){
-            $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
-            values ($IDevento,'DISPONIBLE',0,$i,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
+            $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo,posicion) 
+            values ($IDevento,'DISPONIBLE',0,'','','https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?',$i,$posicion)";
             if($i%2==0){
               $posicion++;
              }
