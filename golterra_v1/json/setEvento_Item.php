@@ -63,9 +63,8 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           $query3 = "select id_event from evento_prueba where latlng='$latlng'";
           $result3 = $conexion->prepare($query3);
           $result3->execute();
-          $row2=$result3->fetch_assoc();
-          $id_evento = (int) $row2['id_event'];
-
+          $row2 = $result3->fetch(PDO::FETCH_ASSOC);
+          $row2 = (int)$row2;
           // CREANDO CUPOS DISPONIBLES DEL EVENTO
           $tipo = (int)$tipo * 2;
           $posicion = 1;
@@ -73,13 +72,13 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
               $n = $i + 1;
               if($n%2==0){
                 $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
-                values ($id_evento,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
+                values ($row2,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
                 $posicion = $posicion + 1;
                 $insert = $conexion->prepare($queryCreandoCupos);
                 $insert->execute();
                }else{
                 $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
-                values ($id_evento,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
+                values ($row2,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
                 $insert = $conexion->prepare($queryCreandoCupos);
                 $insert->execute();
                } 
