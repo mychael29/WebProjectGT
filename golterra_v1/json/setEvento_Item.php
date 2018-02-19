@@ -60,11 +60,14 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           $row = $result2->fetch(PDO::FETCH_ASSOC);
 
           // CREANDO CUPOS DISPONIBLES DEL EVENTO
-          $posicion = 1;
-          $IDevento = $row['id_event'];
-          $TipoPartido = $row['tipo'];
+          $posicion=1;
+          $IDevento=$row['id_event'];
+          $TipoPartido=$row['tipo'];
+          $TipoPartido=(int)$TipoPartido;
+          $numMultiplicar=2;
+          $limitFor=$TipoPartido*$numMultiplicar;
 
-          for ($i=0; i<($TipoPartido*2); $i++){
+          for ($i=0; i<$limitFor; $i++){
               $n = $i + 1;
               if($n%2==0){
                 $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
