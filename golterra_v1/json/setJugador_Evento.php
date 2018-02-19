@@ -39,7 +39,7 @@ if(true) {
           
           
           $query = "update jugadores_evento set id_evento=$id_evento, nombres='$nombres', id_usuario=$id_usuario, rango='$rango', experiencia='$experiencia', url_photo='$url_photo', equipo='$equipo', posicion='$posicion'
-          where equipo='$equipo'";
+          where equipo='$equipo' and posicion='$posicion'";
           /*
           (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) experiencia
           values ($id_evento,'$nombres',$id_usuario,'$rango','$experiencia','$url_photo','$equipo','$posicion')";
