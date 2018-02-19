@@ -63,26 +63,35 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           $posicion=1;
           $IDevento=$row['id_event'];
           $TipoPartido=$row['tipo'];
-          $TipoPartido=(int)$TipoPartido;
+          $TipoPartido=$TipoPartido+0;
           $numMultiplicar=2;
           $limitFor=$TipoPartido*$numMultiplicar;
 
+          //NO FUNCIONA, HACE UN BUCLE DE 1000
+          $i=1;
+          while($i<=$limitFor){
+            $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
+            values ($IDevento,'DISPONIBLE',0,$i,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
+            if($i%2==0){
+              $posicion++;
+             }
+             $insert = $conexion->prepare($queryCreandoCupos);
+             $insert->execute();
+             $i++;
+          }
+
+          /*
           for ($i=0; i<$limitFor; $i++){
               $n = $i + 1;
+              $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
+              values ($IDevento,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
               if($n%2==0){
-                $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
-                values ($IDevento,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
                 $posicion++;
-                $insert = $conexion->prepare($queryCreandoCupos);
-                $insert->execute();
-               }else{
-                $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
-                values ($IDevento,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
-                $insert = $conexion->prepare($queryCreandoCupos);
-                $insert->execute();
                }
+               $insert = $conexion->prepare($queryCreandoCupos);
+               $insert->execute();
           }
-          
+          */
 
           // DEVOLVIENDO DATOS DEL EVENTO CREADO
           $json['evento registrado'][]=$row;
