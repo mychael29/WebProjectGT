@@ -68,12 +68,21 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
 
           // CREANDO CUPOS DISPONIBLES DEL EVENTO
           $tipo = (int)$tipo * 2;
-          while($tipo > 0){
-            $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
-            values ($row2,'DISPONIBLE',0,'','','https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
-            $insert = $conexion->prepare($queryCreandoCupos);
-            $insert->execute();
-            $tipo = $tipo - 1;
+          $posicion = 1;
+          for ($i = 0; i < $tipo; $i++ ){
+              $n = $i + 1;
+              if($n%2==0){
+                $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
+                values ($row2,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
+                $posicion = $posicion + 1;
+                $insert = $conexion->prepare($queryCreandoCupos);
+                $insert->execute();
+               }else{
+                $queryCreandoCupos = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
+                values ($row2,'DISPONIBLE',0,$n,$posicion,'https://arcane-ravine-59770.herokuapp.com/json/image_profile/imagenperfil.png?','')";
+                $insert = $conexion->prepare($queryCreandoCupos);
+                $insert->execute();
+               } 
           }
           
 

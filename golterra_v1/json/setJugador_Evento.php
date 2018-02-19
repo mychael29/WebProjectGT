@@ -33,10 +33,12 @@ if(true) {
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }else{
           //registro
+          // CAMBIARLO A UN UPDATE ... WHERE experiencia = 1 && equipo = 'a'.. LOS VALORES VENDRA POR EL ANDROID Y POR DEFECTO EL ORGANIZADOR EL 1 Y EL 'a'
           $query = "insert into jugadores_evento (`id_evento`,nombres,`id_usuario`,rango,experiencia,url_photo,equipo) 
           values ($id_evento,'$nombres',$id_usuario,'$rango','$experiencia','$url_photo','$equipo')";
           $insert = $conexion->prepare($query);
           $insert->execute();
+          
           /*
           //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
           $inserted_coordenadas->bindParam(1, $id_evento, PDO::PARAM_INT); 
@@ -47,7 +49,8 @@ if(true) {
           $inserted_coordenadas->bindParam(6, $url_photo, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(7, $equipo, PDO::PARAM_STR);
           $inserted_coordenadas->execute();
-        */
+          */
+
           $json['success'][] = 'Apuntado'; //sale entre corchetes y comillas, arreglarlo
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
