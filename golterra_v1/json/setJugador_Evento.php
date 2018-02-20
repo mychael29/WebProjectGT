@@ -29,7 +29,7 @@ if(true) {
 
     if($result->rowCount() > 0){
         
-          $json['success'][] = 'Ya estas apuntado al partido';
+          $json['success'] = 'Ya estas apuntado al partido';
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }else{
@@ -59,7 +59,7 @@ if(true) {
           $inserted_coordenadas->execute();
           */
 
-          $json['success'][] = 'Apuntado'; //sale entre corchetes y comillas, arreglarlo
+          $json['success'] = 'Apuntado'; //sale entre corchetes y comillas, arreglarlo
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }
