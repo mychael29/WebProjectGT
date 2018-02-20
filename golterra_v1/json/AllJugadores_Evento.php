@@ -10,7 +10,18 @@ try{
     die("Error " . $e->getMessage());
     echo "Linea del error " . $e->getLine();
 }
+if ($_SERVER['REQUEST_METHOD'] == 'GET'){
+    $jugadores=array();
+    $query = "Select * from jugadores_evento";
+    $result = $conexion->prepare($query);
+    while($jugador=$result->fetch(PDO::FETCH_ASSOC)){
+        
+        $jugadores[]=$jugador;
+    }
 
+    print json_encode($jugadores);
+}
+/*
 if(isset($_POST['id_evento'])){
     $jugadores=array();
     $id_evento = $_POST['id_evento'];
@@ -24,7 +35,7 @@ if(isset($_POST['id_evento'])){
     }
 
     print json_encode($jugadores);
-
+*/
     /*
 
     $result->execute();
