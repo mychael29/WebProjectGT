@@ -12,9 +12,8 @@ try{
 }
 if ($_SERVER['REQUEST_METHOD'] == 'GET'){
     $jugadores=array();
-    $query = "Select * from jugadores_evento";
-    $result = $conexion->prepare($query);
-    while($jugador=$result->fetch(PDO::FETCH_ASSOC)){
+    $consulta=$conexion->query("SELECT * FROM jugadores_evento");
+    while($jugador=$consulta->fetch(PDO::FETCH_ASSOC)){
         
         $jugadores[]=$jugador;
     }
@@ -36,22 +35,7 @@ if(isset($_POST['id_evento'])){
 
     print json_encode($jugadores);
 */
-    /*
 
-    $result->execute();
-    
-    if($result->rowCount() > 0){
-
-        while($row = $result->fetch(PDO::FETCH_ASSOC)){
-            $json['jugadores_evento_activity'][] = $row;
-        }
-
-        echo json_encode($json);
-    }else{
-        $json['error'] = 'No hay jugadores apuntados aun';
-    }    
-    */
-}
 
 	
 ?>
