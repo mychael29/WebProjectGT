@@ -161,7 +161,7 @@
 <br>
 <h6>Buenas, este proyecto es para hacer las pruebas del funcionamiento de una App en android que estoy desarrollando.</h6>
 <h6>Esta Web es solo para registrarse e iniciar sesión, y donde hay una lista de los usuarios que se han</h6>
-<h6>registrado sea por la web o por la aplicación móvil, tambien se puede modificar o editar la información</h6>
+<h6>registrado vía web o por la aplicación móvil, tambien se puede modificar o editar la información</h6>
 <h6>de los usuarios, y un perfil simple para el quien inicio sesión.</h6>
 <h6>Las demas funciones estan para uso exclusivo de la aplicación móvil, pronto ordenare e implementare mas codigó</h6>
 <h6>para la plataforma web, para darle mas funcionalidad y deje de servir de solo prueba.</h6>
