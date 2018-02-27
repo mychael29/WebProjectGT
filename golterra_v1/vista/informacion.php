@@ -159,13 +159,14 @@
 <div class="container">
 <br>
 <div class="col-lg-6 col-md-6">
-        <h3 class="text-center">Proyecto PHP-MySQL-AndroidE</h3>
-        <h6>Buenas, este proyecto es para hacer las pruebas del funcionamiento de una App en android que estoy desarrollando. Esta Web es solo para registrarse e iniciar sesión, y donde hay una lista de los usuarios que se han registrado vía web o por la aplicación móvil, tambien se puede modificar o editar la información de los usuarios, y un perfil simple para el quien inicio sesión. Las demas funciones estan para uso exclusivo de la aplicación móvil, pronto ordenare e implementare mas codigó para la plataforma web, para darle mas funcionalidad y deje de servir de solo prueba.</h6>
+        <h3>Proyecto PHP-MySQL-Android</h3>
+        <h5>Buenas, este proyecto es para hacer las pruebas del funcionamiento de una App en android que estoy desarrollando. Esta Web es solo para registrarse e iniciar sesión, y donde hay una lista de los usuarios que se han registrado vía web o por la aplicación móvil, tambien se puede modificar o editar la información de los usuarios, y un perfil simple para el quien inicio sesión. Las demas funciones estan para uso exclusivo de la aplicación móvil, pronto ordenare e implementare mas codigó para la plataforma web, para darle mas funcionalidad y deje de servir de solo prueba.</h5>
+        <br>
+        <h6>GitHub:<a href="https://github.com/mychael29" target=”_blank”> https://github.com/mychael29</a></h6>
     </div>
 
 </div>
 <br>
-<h6>Mi GitHub:<a href="https://github.com/mychael29" target=”_blank”> https://github.com/mychael29</a></h6>
 <br>
 <br>
 <br>
