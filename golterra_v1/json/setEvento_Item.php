@@ -25,6 +25,7 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
 
     $titulo = $_POST['titulo'];
     $descripcion = $_POST['descripcion'];
+    $genero = $_POST['genero'];
 
     $query = "Select * from evento_prueba where latlng='$latlng'";
     $result = $conexion->prepare($query);
@@ -37,7 +38,7 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }else{
           //registro
-          $query = "insert into evento_prueba (latlng, name_organizador,fecha,hora,distrito,tipo,cancha_name,photo_url_cancha,titulo,descripcion,modo_partido,fecha_evento_creado) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+          $query = "insert into evento_prueba (latlng, name_organizador,fecha,hora,distrito,tipo,cancha_name,photo_url_cancha,titulo,descripcion,modo_partido,fecha_evento_creado,genero) values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
           $inserted_coordenadas = $conexion->prepare($query);
           //$inserted->bindParam('ssss',$email,$password,$url_image,$nombres);//estaba con bind_param
           $inserted_coordenadas->bindParam(1, $latlng, PDO::PARAM_STR); 
@@ -52,6 +53,7 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
           $inserted_coordenadas->bindParam(10, $descripcion, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(11, $modo_partido, PDO::PARAM_STR);
           $inserted_coordenadas->bindParam(12, $fecha_evento_creado, PDO::PARAM_STR);
+          $inserted_coordenadas->bindParam(13, $genero, PDO::PARAM_STR);
           $inserted_coordenadas->execute();
 
           $query2 = "select * from evento_prueba where latlng='$latlng'";
