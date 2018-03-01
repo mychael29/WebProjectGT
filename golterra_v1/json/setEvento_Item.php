@@ -33,7 +33,7 @@ if(isset($_POST['name_organizador'],$_POST['fecha'],$_POST['distrito'],$_POST['t
 
     if($result->rowCount() == 1){
         
-          $json['evento registrado'] = 'Ya existe el evento'; //sucess
+          $json['evento registrado'] = null; //sucess
           echo json_encode($json);
           //mysqli_close($this -> conexion); // buscar otra forma de cerrar la conexion, y si es necesario aqui
     }else{
