@@ -11,7 +11,7 @@ try{
 
 if(isset($_POST['id_event'])) {
 	$id_event = $_POST['id_event'];
-    $query = "SELECT * FROM evento_prueba WHERE id_event='$id_event'";
+    $query = "SELECT * FROM evento_prueba WHERE id_event=$id_event";
     $result = $conexion->prepare($query);
     $result->execute();
     $row = $result->fetch(PDO::FETCH_ASSOC);
