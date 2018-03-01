@@ -9,8 +9,7 @@ try{
     echo "Linea del error " . $e->getLine();
 }
 
-if(isset($_POST['id_event'])) {
-    $id_event = $_POST['id_event'];
+$id_event = $_POST['id_event'];
     $id_event = (int)$id_event;
     $query = "SELECT * FROM evento_prueba WHERE id_event=$id_event";
     $result = $conexion->prepare($query);
@@ -19,6 +18,5 @@ if(isset($_POST['id_event'])) {
     $json['evento'][]=$row;
 
     echo json_encode($json);
-}
 	
 ?>
