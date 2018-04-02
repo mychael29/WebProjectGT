@@ -1,10 +1,11 @@
 <?php
 require "init.php";
+$ident_user = $_POST['id_user'];
 $message = $_POST['message'];
 $title_to_fcm = $_POST['title'];
 $path_to_fcm = 'https://fcm.googleapis.com/fcm/send';
 $server_key = "";
-$sql = "SELECT fcm_token FROM fcm_info";
+$sql = "SELECT fcm_token FROM token_firebase WHERE id_usuario = $ident_user";
 $result = mysqli_query($con,$sql);
 $row = mysqli_fetch_row($result);
 $key = $row[0];
