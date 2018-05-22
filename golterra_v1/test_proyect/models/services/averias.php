@@ -1,4 +1,5 @@
 <?php
+echo "error 1 averias_db.php";
 include('../db/averias_db.php');
 
 //$averias=array();
@@ -7,7 +8,7 @@ include('../db/averias_db.php');
 //while($filas=$consulta->fetch(PDO::FETCH_ASSOC)){   
   //  $averias[]=$filas;
 //}
-echo "error 1";
+
 
 $tamagno_paginas=18;
   
