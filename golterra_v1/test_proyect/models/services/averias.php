@@ -18,7 +18,7 @@ if(isset($_GET["pagina"])){
     
     if ($_GET["pagina"]==1){
         
-        header("Location:../../reporte_averias.php"); // CORREGIR Y VALIDAR
+        header('Location:reporte_averias.php'); // CORREGIR Y VALIDAR
         
     }else{
         

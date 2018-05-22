@@ -9,7 +9,7 @@ class Averias {
 
     public static function getAll($empezar_desde,$tamagno_paginas,$conexion){
         echo "error db2 getAll";
-        $consulta = "SELECT * FROM averias LIMIT $empezar_desde, $tamagno_paginas";
+        $consulta = "SELECT * FROM averia LIMIT $empezar_desde, $tamagno_paginas";
         try {
             $averias=array();
             // Preparar sentencia
@@ -28,7 +28,7 @@ class Averias {
 
     public static function cantFilas($conexion){
         echo "error db2 cantFilas";
-        $consulta = "SELECT username, email, nombres FROM usuarios";
+        $consulta = "SELECT zona, motivo, estado FROM averia";
         try {
            
             // Preparar sentencia
@@ -43,10 +43,8 @@ class Averias {
             return false;
         }
     }
-    /**
-     * Actualiza un registro de la bases de datos basado
-     * en los nuevos valores relacionados con un identificador
-     */
+
+    /*
     public static function update($iduser,$username,$email,$password) {
 
         // Creando consulta UPDATE
@@ -60,9 +58,6 @@ class Averias {
         return $cmd;
     }
 
-    /**
-     * Insertar un nuevo usuario
-     */
     public static function insert($username, $email, $password) {
         // Sentencia INSERT
         $comando = "INSERT INTO usuarios ( " .
@@ -81,12 +76,6 @@ class Averias {
         );
     }
 
-    /**
-     * Eliminar el registro con el identificador especificado
-     *
-     * @param $iduser identificador de la tabla usuarios
-     * @return bool Respuesta de la eliminación
-     */
     public static function delete($iduser)
     {
         // Sentencia DELETE
@@ -94,7 +83,7 @@ class Averias {
         // Preparar la sentencia
         $sentencia = Database::getInstance()->getDb()->prepare($comando);
         return $sentencia->execute(array($iduser));
-    }
+    }*/
 }
 
 ?>
