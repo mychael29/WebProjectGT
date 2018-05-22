@@ -58,7 +58,7 @@
             <li role="separator" class="divider"></li>
             <li><a href="#">Reglas</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Ayuda</a></li>
+            <li><a href="test_proyect/index.php">Ayuda</a></li>
           </ul>
         </li>
       </ul>
