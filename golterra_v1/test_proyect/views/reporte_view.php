@@ -52,7 +52,7 @@
                 </tr> 
                 </thead>
             <?php
-                    foreach($matrizAverias as $averia):?>
+                    foreach($averias as $averia):?>
             
                 <tr>
                 <td><?php echo $averia["id_averia"]?></td>
