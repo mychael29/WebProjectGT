@@ -3,17 +3,17 @@ include('conexion.php');
 echo "error db1";
 
 
-$consulta = "SELECT zona, motivo, estado FROM averia";
-$comando = $conexion->prepare($consulta);
-$comando->execute(array());
-$num_filas=$comando->rowCount();
+$consulta1 = "SELECT zona, motivo, estado FROM averia";
+$comando1 = $conexion->prepare($consulta1);
+$comando1->execute(array());
+$num_filas=$comando1->rowCount();
 
-$consulta = "SELECT * FROM averia LIMIT $empezar_desde, $tamagno_paginas";
+$consulta2 = "SELECT * FROM averia LIMIT $empezar_desde, $tamagno_paginas";
 $averias=array();
         // Preparar sentencia
-$comando = $conexion->query($consulta);
+$comando2 = $conexion->query($consulta2);
 
-while($filas=$comando->fetch(PDO::FETCH_ASSOC)){   
+while($filas=$comando2->fetch(PDO::FETCH_ASSOC)){   
     $averias[]=$filas;
 }
 

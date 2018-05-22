@@ -64,7 +64,7 @@
                 if(empty($averia["estado"])){
                     echo "NO";
                 }else{
-                    if($averia["finalizado"]=="no imagen"){ // CORREGIR
+                    if($averia["estado"]==""){ // CORREGIR
                     echo "NO";
                     }else{
                     echo "SI";
