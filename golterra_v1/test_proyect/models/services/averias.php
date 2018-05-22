@@ -1,5 +1,7 @@
 <?php
 echo "error 1 averias_dbb";
+
+
 include('../db/averias_db.php');
 
 //$averias=array();
@@ -16,7 +18,7 @@ if(isset($_GET["pagina"])){
     
     if ($_GET["pagina"]==1){
         
-        header("Location:report_averias.php"); // CORREGIR Y VALIDAR
+        header("Location:../../reporte_averias.php"); // CORREGIR Y VALIDAR
         
     }else{
         
