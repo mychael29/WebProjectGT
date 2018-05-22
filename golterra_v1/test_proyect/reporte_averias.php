@@ -96,7 +96,28 @@
     <div class="container">
       <div class="row">
         <div class="col-xs12">
-            
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
         <?php 
         echo "report error1";
         //include('controllers/averias_controller.php');
