@@ -1,5 +1,5 @@
 <?php
-echo "error 1 averias_db.php";
+echo "error 1 averias_dbb";
 include('../db/averias_db.php');
 
 //$averias=array();
