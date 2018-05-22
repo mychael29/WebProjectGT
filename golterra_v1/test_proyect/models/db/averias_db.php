@@ -1,6 +1,13 @@
 <?php
 include('conexion.php');
 echo "error db1";
+
+
+$consulta = "SELECT zona, motivo, estado FROM averia";
+$comando = $conexion->prepare($consulta);
+$comando->execute(array());
+$num_filas=$comando->rowCount();
+
 $consulta = "SELECT * FROM averia LIMIT $empezar_desde, $tamagno_paginas";
 $averias=array();
         // Preparar sentencia
@@ -10,10 +17,7 @@ while($filas=$comando->fetch(PDO::FETCH_ASSOC)){
     $averias[]=$filas;
 }
 
-$consulta = "SELECT zona, motivo, estado FROM averia";
-$comando = $conexion->prepare($consulta);
-$comando->execute(array());
-$num_filas=$comando->rowCount();
+$matriz_averias = $averias;
 
 
     /*

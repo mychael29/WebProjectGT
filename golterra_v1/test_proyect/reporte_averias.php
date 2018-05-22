@@ -124,7 +124,7 @@
         require("models/services/averias.php");
 
         echo "controllers error2";
-        $matriz_averias = $averias;
+        //$matriz_averias = $averias;
 
         require("views/reporte_view.php");
         echo "report error2"; ?>
