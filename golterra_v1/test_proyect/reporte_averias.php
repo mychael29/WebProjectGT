@@ -127,7 +127,7 @@
         echo "controllers error2";
         //$matriz_averias = $averias;
         
-        require("db/averias_db.php");
+        require("bbdd/averias_db.php");
 
         echo "error 3";
         $total_paginas=ceil($num_filas/$tamagno_paginas);
