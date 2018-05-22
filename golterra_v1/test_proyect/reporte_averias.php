@@ -96,8 +96,11 @@
     <div class="container">
       <div class="row">
         <div class="col-xs12">
-
-        <?php include('controllers/averias_controller.php') ?>
+            
+        <?php 
+        echo "report error1";
+        include('controllers/averias_controller.php');
+        echo "report error2"; ?>
 
         </div>
       </div>
