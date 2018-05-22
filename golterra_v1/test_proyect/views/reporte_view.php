@@ -43,7 +43,7 @@
                 <th class="text-center">Id</th>
                 <th>Username</th>
                 <th>Detalles</th>
-                <th>Estado</th>
+                
                 <th>Zona</th>
                 <th>Finalizado</th>
                 <th>Fecha y Hora</th>
@@ -58,10 +58,10 @@
                 <td><?php echo $averia["id_averia"]?></td>
                 <td class="text-left"><?php echo $averia["username"]?></td>
                 <td class="text-left"><?php echo $averia["description"]?></td>
-                <td class="text-left"><?php echo $averia["estado"]?></td>
+               
                 <td class="text-left"><?php echo $averia["zona"]?></td>
                 <td class="text-left"><?php 
-                if(empty($averia["finalizado"])){
+                if(empty($averia["estado"])){
                     echo "NO";
                 }else{
                     if($averia["finalizado"]=="no imagen"){ // CORREGIR
