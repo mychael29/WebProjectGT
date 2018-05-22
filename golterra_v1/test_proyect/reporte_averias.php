@@ -97,7 +97,7 @@
       <div class="row">
         <div class="col-xs12">
 
-        <?php include('controller/averias_controller.php') ?>
+        <?php include('controllers/averias_controller.php') ?>
 
         </div>
       </div>
