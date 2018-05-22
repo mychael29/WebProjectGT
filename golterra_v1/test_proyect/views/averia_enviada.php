@@ -1,4 +1,12 @@
 
+<?php 
+	session_start(); 
+
+	if (!isset($_SESSION['username'])) {
+		$_SESSION['msg'] = "Debes iniciar sesión primero";
+		header('location: login.php');
+	}
+?>                                                          
 <html>
 <head>
 <meta charset="utf-8">
@@ -6,9 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Incidencias de averías masivas</title>
 
-<!-- Bootstrap -->
-<link rel="stylesheet" href="css/bootstrap.css">
-<!--<link rel="stylesheet" href="css/estilo_loginregister.css">-->
+<link rel="stylesheet" href="../css/bootstrap.css">
 <link href="signin.css" rel="stylesheet">
 
 </head>
@@ -18,19 +24,18 @@
 <br>
 <br>
 <br>
-<?php include('models/services/usuario.php') ?>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
   
   <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myDefaultNavbar1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.php">Incidencias de Averías Masivas</a> </div>
+      <a class="navbar-brand" href="../index.php">Incidencias de Averías Masivas</a> </div>
 
     <div class="collapse navbar-collapse" id="myDefaultNavbar1">
      
       <ul class="nav navbar-nav">
-        <li class=""><a href="views/registrar_view.php">Generar Reporte<span class="sr-only">(current)</span></a></li>
-        <li class=""><a href="reporte_averias.php">Historial de Averias<span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="registrar_view.php">Generar Reporte<span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="../reporte_averias.php">Historial de Averias<span class="sr-only">(current)</span></a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right" >
@@ -46,14 +51,14 @@
           
         <?php  if (isset($_SESSION['username'])) : ?>
         <li><a href='#'>Perfil</a></li>
-        <li><a href='#'>Historial de Averias</a></li>
+        <li><a href='../reporte_averias.php'>Historial de Averias</a></li>
         <li role='separator' class='divider'></li>
-        <li><a href="index.php?logout='1'">Cerrar Sesión</a></li>
+        <li><a href="../index.php?logout='1'">Cerrar Sesión</a></li>
 		    <?php endif ?>
 
         <?php  if (!isset($_SESSION['username'])) : ?>
-        <li><a href='login.php'>Iniciar sesión</a></li>
-        <li><a href='register.php'>Registrarse</a></li>
+        <li><a href='../login.php'>Iniciar sesión</a></li>
+        <li><a href='../register.php'>Registrarse</a></li>
 		    <?php endif ?>
 
         </ul>
@@ -66,29 +71,25 @@
 </nav>
 <br>
 <br>
-
+<footer class="text-center">
 <div class="container">
- 
-<div class="col-sm-3"></div>
-        <div class="col-sm-6">
-
-	<form class="" method="post" action="login.php">
-
-		<?php include('errors.php'); ?> 
-
-		<h2 class="form-signin-heading">Login</h2>
+<div class="row">
+<div class="col-xs-12">
+		<span class="glyphicon glyphicon-ok"> </span> 
         <br>
-        <input type="text" class="form-control" name="email" placeholder="email" required autofocus />
         <br>
-		<input type="password" class="form-control" name="password" placeholder="Password" required=""/>
-		<br>
-		<button class="btn btn-lg btn-primary btn-block" name="login_user" type="submit">Login</button> 
-		
-	</form>
-    </div>
-    <div class="col-sm-3"></div>
-
+        <p>Averia procesada</p>
 </div>
+</div>
+</div>
+</footer>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -97,18 +98,20 @@
 <br>
 <br>
 <hr>
+
+
 <footer class="text-center">
 <div class="container">
 <div class="row">
   <div class="col-xs-12">
-  <p>Maycol Meza Roque.</p>
+    <p>Maycol Meza Roque.</p>
   </div>
 </div>
 </div>
 </footer>
 
-<script src="js/jquery-1.11.3.min.js"></script> 
-<script src="js/bootstrap.js"></script>
+<script src="../js/jquery-1.11.3.min.js"></script> 
+<script src="../js/bootstrap.js"></script>
 
 </body>
 

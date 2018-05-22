@@ -1,14 +1,6 @@
-<?php 
+<?php /*
   session_start(); 
-  /*
-  	if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "Debes iniciar sesión primero";
-    $sesion = 0;
-		header("location: login.php");
-	}else{
-    $sesion = 1;
-  }
-  */
+
 
 
 	if (isset($_GET['logout'])) {
@@ -16,7 +8,16 @@
 		unset($_SESSION['username']);
 		header("location: index.php");
   }
+*/
+?>
 
+<?php 
+	session_start(); 
+
+	if (!isset($_SESSION['username'])) {
+		$_SESSION['msg'] = "Debes iniciar sesión primero";
+		header('location: login.php');
+	}
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +59,7 @@
             <li role="separator" class="divider"></li>
             <li><a href="#">Reglas</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="test_proyect/index.php">Ayuda</a></li>
+            <li><a href="test_proyect/index.php">Proyecto-Test</a></li>
           </ul>
         </li>
       </ul>

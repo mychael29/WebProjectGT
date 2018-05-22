@@ -1,20 +1,5 @@
 
-<?php 
-	session_start(); 
 
-	if (!isset($_SESSION['username'])) {
-		$_SESSION['msg'] = "Debes iniciar sesión primero";
-		header('location: ../../login.php');
-	}
-
-  /*
-	if (isset($_GET['logout'])) {
-		session_destroy();
-		unset($_SESSION['username']);
-		header("location: login.php");
-	}
-  */
-?>
 <html lang="en">
 
 <head>
@@ -29,23 +14,23 @@
 <body>
 
 <br>
-<?php echo "2 matriz_averias " . $matriz_averias;?>
+
 <section>
     <div class="container">
+
       <div class="row">
         <div class="col-xs12 text-center">
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <div class="container">
-            <!-- table-bordered -->
+            
             <table class="table table-hover" >
                 <thead>
                 <tr class="active">
-                <th class="text-center">Id</th>
-                <th>Username</th>
-                <th>Detalles</th>
-                
+                <th class="text-center">ID Averia</th>
                 <th>Zona</th>
+                <th>Motivo</th>
                 <th>Finalizado</th>
+                <th>Usuario</th>
                 <th>Fecha y Hora</th>
                 <th class=""></th>
                 <th class=""></th>
@@ -56,37 +41,30 @@
             
                 <tr>
                 <td><?php echo $averia["id_averia"]?></td>
-                <td class="text-left"><?php echo $averia["username"]?></td>
-                <td class="text-left"><?php echo $averia["description"]?></td>
                
                 <td class="text-left"><?php echo $averia["zona"]?></td>
+                <td class="text-left"><?php echo $averia["motivo"]?></td>
                 <td class="text-left"><?php 
                 if(empty($averia["estado"])){
                     echo "NO";
                 }else{
-                    if($averia["estado"]==""){ // CORREGIR
+                    if($averia["estado"]!="Finalizado"){ 
                     echo "NO";
                     }else{
                     echo "SI";
                     }
                 }?></td>
+                <td class="text-left"><?php echo $averia["username"]?></td>
                 <td class="text-left"><?php echo $averia["fecha_hora"]?></td>
-                <td class=""><a name='del' id='del' value='Borrar' href="modelo/borrar.php?Id=<?php echo $averia["iduser_"]?>"><span class="glyphicon glyphicon-trash"></span></a></td>
-                <td class=""><a name='up' id='up' value='Actualizar' href="vista/editar.php?Id=<?php echo $averia["iduser_"]?> & username=<?php echo $averia["username"]?> & email=<?php echo $averia["email"]?> & nombres=<?php echo $averia["nombres"]?>"><span class="glyphicon glyphicon-edit"></span></a></td>
+                
+                <td class=""><a name='del' id='del' value='Borrar' href="models/db/delete_averia.php?Id=<?php echo $averia["id_averia"]?>"><span class="glyphicon glyphicon-trash"></span></a></td>
+                <td class=""><a name='up' id='up' value='Actualizar' href="views/editar_view.php?Id=<?php echo $averia["id_averia"]?> & motivo=<?php echo $averia["motivo"]?> & username=<?php echo $averia["username"]?> & zona=<?php echo $averia["zona"]?> & estado=<?php echo $averia["estado"]?>"><span class="glyphicon glyphicon-edit"></span></a></td>
                 </tr>
                 
                 <?php 
                 endforeach;
             ?>
-            <!--  insertar datos a la base de datos       
-                <tr>
-                    <td></td>
-                <td><input type='text' name='Nom' size='10' class='centrado'></td>
-                <td><input type='text' name='Ape' size='10' class='centrado'></td>
-                <td><input type='text' name='Email' size='10' class='centrado'></td>
-                <td><button type='submit' name='cr' id='cr' value='Insertar'class="btn btn-success">Insertar</button></td>
-            </tr>
-            -->
+   
             </table>
             </div>
             </form>
@@ -132,17 +110,7 @@
   
 </section>
 
-<hr>
 
-<footer class="text-center">
-<div class="container">
-<div class="row">
-  <div class="col-xs-12">
-    <p>Copyright © Maycol Meza Roque.</p>
-  </div>
-</div>
-</div>
-</footer>
 
 <script src="../js/jquery-1.11.3.min.js"></script> 
 <script src="../js/bootstrap.js"></script>

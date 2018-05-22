@@ -3,7 +3,7 @@
 
 	if (!isset($_SESSION['username'])) {
 		$_SESSION['msg'] = "Debes iniciar sesión primero";
-		header('location: ../login.php');
+		header('location: login.php');
 	}
 ?>
 <html lang="en">
@@ -22,70 +22,45 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
    
-    <div class="navbar-header">
+  <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myDefaultNavbar1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="index.php">Incidencias de Averías Masivas</a> </div>
 
     <div class="collapse navbar-collapse" id="myDefaultNavbar1">
-      <ul class="nav navbar-nav"><li><a href="#">Reporte<span class="sr-only">(current)</span></a></li></ul>
+     
+      <ul class="nav navbar-nav">
+        <li class=""><a href="views/registrar_view.php">Generar Reporte<span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="reporte_averias.php">Historial de Averias<span class="sr-only">(current)</span></a></li>
+      </ul>
+
       <ul class="nav navbar-nav navbar-right" >
       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true"><span class="glyphicon glyphicon-user"></span> <?php 
       
-    if(!isset($_SESSION['username'])){
-        echo "Usuario";
-    }else{
-        if(empty($_SESSION['username']['username'])){
-          echo "sin username";
-        }else{
-          echo $_SESSION['username']['username']; 
-        }
-    }?> <span class="caret"></span></a>
+      if(!isset($_SESSION['username'])){
+        echo "User";
+      }else{
+        echo $_SESSION['username'];
+      }?> <span class="caret"></span></a>   
         
-    <ul class="dropdown-menu">
-        
-    <?php  if (isset($_SESSION['username'])) : ?>
-    <li>
-        <div class="navbar-content">
-            <div class="row">
-                <div class="col-md-5">
-                    <img src="<?php echo 'https://arcane-ravine-59770.herokuapp.com/json/' . $_SESSION['username']['photo']; ?>"
-                        alt="Alternate Text" class="img-responsive img-thumbnail" />
-                    <p class="text-center small">
-                        <a href="#">Cambiar foto</a></p>
-                </div>
-                <div class="col-md-7">
-                    <span><?php echo $_SESSION['username']['nombres']; ?></span>
-                    <p class="text-muted small">
-                    <?php echo $_SESSION['username']['email']; ?></p>
-                    <div class="divider">
-                    </div>
-                    <a href='vista/user_profile.php' class="btn btn-primary btn-sm active">Ver Perfil</a>
-                </div>
-            </div>
-        </div>
-        <div class="navbar-footer">
-            <div class="navbar-footer-content">
-                <div class="row">
-                    <div class="col-md-6">
-                        <a href="#" class="btn btn-default btn-sm">Cambiar Passowrd</a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="index.php?logout='1'" class="btn btn-default btn-sm pull-right">Sign Out</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <?php endif ?>
-    
-    <?php  if (!isset($_SESSION['username'])) : ?>
-    <li><a href="login.php">Iniciar sesión</a></li>
-    <li><a href="register.php">Registrarse</a></li>
-    <?php endif ?>
-        
-    </ul>
-    </li>
-    </ul>  
+        <ul class="dropdown-menu">
+          
+        <?php  if (isset($_SESSION['username'])) : ?>
+        <li><a href='#'>Perfil</a></li>
+        <li><a href='reporte_averias.php'>Historial de Averias</a></li>
+        <li role='separator' class='divider'></li>
+        <li><a href="index.php?logout='1'">Cerrar Sesión</a></li>
+		    <?php endif ?>
+
+        <?php  if (!isset($_SESSION['username'])) : ?>
+        <li><a href='../login.php'>Iniciar sesión</a></li>
+        <li><a href='../register.php'>Registrarse</a></li>
+		    <?php endif ?>
+
+        </ul>
+  
+      </li>
+      </ul>
+
     </div>
   </div>
 </nav>
@@ -99,41 +74,8 @@
         <br>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
 
-        <?php 
-        echo "report error1";
-        //require("controllers/averias_controller.php");
-        require("models/services/averias.php");
-
-
-        echo "controllers error2";
-        //$matriz_averias = $averias;
-        
-        require("bbdd/averias_db.php");
-
-        echo "error 3";
-        $total_paginas=ceil($num_filas/$tamagno_paginas);
-        echo "error 4";
-        require("views/reporte_view.php");
-        echo "report error2"; ?>
+        <?php require("controllers/averias_controller.php"); ?>
 
         </div>
       </div>
@@ -147,7 +89,7 @@
 <div class="container">
 <div class="row">
   <div class="col-xs-12">
-    <p>Copyright © Maycol Meza Roque.</p>
+  <p>Maycol Meza Roque.</p>
   </div>
 </div>
 </div>
