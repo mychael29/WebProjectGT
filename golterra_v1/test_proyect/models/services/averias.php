@@ -7,13 +7,15 @@ include('../db/averias_db.php');
 //while($filas=$consulta->fetch(PDO::FETCH_ASSOC)){   
   //  $averias[]=$filas;
 //}
+echo "error 1";
+
 $tamagno_paginas=18;
   
 if(isset($_GET["pagina"])){
     
     if ($_GET["pagina"]==1){
         
-        header("Location:index_users.php"); // CORREGIR Y VALIDAR
+        header("Location:report_averias.php"); // CORREGIR Y VALIDAR
         
     }else{
         
@@ -29,8 +31,11 @@ $empezar_desde=($pagina-1)*$tamagno_paginas;
 //$sql_total="SELECT username, email, nombres FROM usuarios";
 //$resultado=$conexion->prepare($sql_total);
 //$resultado->execute(array());
+echo "error 2";
 $num_filas=Averias::cantFilas($conexion);
+echo "error 3";
 $total_paginas=ceil($num_filas/$tamagno_paginas);
+echo "error 4";
 $averias_all = Averias::getAll($empezar_desde,$tamagno_paginas,$conexion);
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 include('conexion.php');
-
+echo "error db1";
 
 class Averias {
     function __construct()
@@ -8,7 +8,7 @@ class Averias {
     }
 
     public static function getAll($empezar_desde,$tamagno_paginas,$conexion){
-
+        echo "error db2 getAll";
         $consulta = "SELECT * FROM averias LIMIT $empezar_desde, $tamagno_paginas";
         try {
             $averias=array();
@@ -27,6 +27,7 @@ class Averias {
     }
 
     public static function cantFilas($conexion){
+        echo "error db2 cantFilas";
         $consulta = "SELECT username, email, nombres FROM usuarios";
         try {
            
