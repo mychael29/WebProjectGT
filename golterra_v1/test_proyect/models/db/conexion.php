@@ -1,4 +1,6 @@
+
 <?php
+
 echo "conexion";
 require_once("../../../config.php"); // corregirlo para probarlo en el localhost
 /*

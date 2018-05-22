@@ -120,7 +120,7 @@
 
         <?php 
         echo "report error1";
-        include('controllers/averias_controller.php');
+        require_once('controllers/averias_controller.php');
         echo "report error2"; ?>
 
         </div>
