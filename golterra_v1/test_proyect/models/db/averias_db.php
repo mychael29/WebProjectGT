@@ -7,13 +7,13 @@ class Averias {
     {
     }
 
-    public static function getAll($empezar_desde,$tamagno_paginas){
+    public static function getAll($empezar_desde,$tamagno_paginas,$conexion){
 
         $consulta = "SELECT * FROM averias LIMIT $empezar_desde, $tamagno_paginas";
         try {
             $averias=array();
             // Preparar sentencia
-            $comando = Database::getInstance()->getDb()->query($consulta);
+            $comando = $conexion->query($consulta);
 
             while($filas=$comando->fetch(PDO::FETCH_ASSOC)){   
                 $averias[]=$filas;
@@ -26,12 +26,12 @@ class Averias {
         }
     }
 
-    public static function cantFilas(){
+    public static function cantFilas($conexion){
         $consulta = "SELECT username, email, nombres FROM usuarios";
         try {
            
             // Preparar sentencia
-            $comando = Database::getInstance()->getDb()->prepare($consulta);
+            $comando = $conexion->prepare($consulta);
             $comando->execute(array());
             $num_filas=$comando->rowCount();
         

@@ -29,8 +29,8 @@ $empezar_desde=($pagina-1)*$tamagno_paginas;
 //$sql_total="SELECT username, email, nombres FROM usuarios";
 //$resultado=$conexion->prepare($sql_total);
 //$resultado->execute(array());
-$num_filas=Averias::cantFilas();
+$num_filas=Averias::cantFilas($conexion);
 $total_paginas=ceil($num_filas/$tamagno_paginas);
-$averias_all = Averias::getAll();
+$averias_all = Averias::getAll($empezar_desde,$tamagno_paginas,$conexion);
 
 ?>
