@@ -46,7 +46,7 @@
       <a class="navbar-brand" href="index.php">Incidencias de Averías Masivas</a> </div>
 
     <div class="collapse navbar-collapse" id="myDefaultNavbar1">
-      <ul class="nav navbar-nav"><li><a href="controller/averias_controller.php">Reporte<span class="sr-only">(current)</span></a></li></ul>
+      <ul class="nav navbar-nav"><li><a href="controllers/averias_controller.php">Reporte<span class="sr-only">(current)</span></a></li></ul>
       <ul class="nav navbar-nav navbar-right" >
       <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true"><span class="glyphicon glyphicon-user"></span> <?php 
       
