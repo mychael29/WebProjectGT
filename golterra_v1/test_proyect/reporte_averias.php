@@ -123,9 +123,15 @@
         //require("controllers/averias_controller.php");
         require("models/services/averias.php");
 
+
         echo "controllers error2";
         //$matriz_averias = $averias;
+        
+        require("db/averias_db.php");
 
+        echo "error 3";
+        $total_paginas=ceil($num_filas/$tamagno_paginas);
+        echo "error 4";
         require("views/reporte_view.php");
         echo "report error2"; ?>
 

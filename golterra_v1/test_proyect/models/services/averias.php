@@ -34,10 +34,10 @@ $empezar_desde=($pagina-1)*$tamagno_paginas;
 //$sql_total="SELECT username, email, nombres FROM usuarios";
 //$resultado=$conexion->prepare($sql_total);
 //$resultado->execute(array());
-require("../db/averias_db.php");
+//require("../db/averias_db.php");
 
-echo "error 3";
-$total_paginas=ceil($num_filas/$tamagno_paginas);
-echo "error 4";
+//echo "error 3";
+//$total_paginas=ceil($num_filas/$tamagno_paginas);
+//echo "error 4";
 
 ?>
