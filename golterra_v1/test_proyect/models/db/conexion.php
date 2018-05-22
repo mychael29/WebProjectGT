@@ -1,5 +1,5 @@
 <?php
-require_once("../db/models/test_proyect/config.php"); // corregirlo para probarlo en el localhost
+require_once("../../../config.php"); // corregirlo para probarlo en el localhost
 /*
 try{
 	$conexion = new PDO($host,$usernameserver,$passwordserver);
