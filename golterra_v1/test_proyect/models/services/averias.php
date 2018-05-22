@@ -35,11 +35,9 @@ $empezar_desde=($pagina-1)*$tamagno_paginas;
 //$resultado=$conexion->prepare($sql_total);
 //$resultado->execute(array());
 include('../db/averias_db.php');
-echo "error 2";
-$num_filas= cantFilas();
+
 echo "error 3";
 $total_paginas=ceil($num_filas/$tamagno_paginas);
 echo "error 4";
-$averias_all = getAll();
 
 ?>
