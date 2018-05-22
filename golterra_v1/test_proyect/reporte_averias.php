@@ -120,7 +120,13 @@
 
         <?php 
         echo "report error1";
-        require("controllers/averias_controller.php");
+        //require("controllers/averias_controller.php");
+        require("../models/services/averias.php");
+
+        echo "controllers error2";
+        $matriz_averias = $averias_all;
+
+        require("../views/reporte_view.php");
         echo "report error2"; ?>
 
         </div>
