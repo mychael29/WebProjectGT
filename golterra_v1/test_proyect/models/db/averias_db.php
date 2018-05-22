@@ -1,7 +1,14 @@
 <?php
 echo "error db1";
-include('conexion.php');
-
+include('../../../config.php');
+try{
+    $conexion = new PDO($host,$usernameserver,$passwordserver);
+    $conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conexion -> exec("SET CHARACTER SET UTF8");
+}catch(Exception $e){
+    die("Error " . $e->getMessage());
+    echo "Linea del error " . $e->getLine();
+}
 
 $comando1 = $conexion->prepare("SELECT zona, motivo, estado FROM averia");
 $comando1->execute(array());
