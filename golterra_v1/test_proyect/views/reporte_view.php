@@ -55,10 +55,10 @@
                     foreach($matrizAverias as $averia):?>
             
                 <tr>
-                <td><?php echo $averia["iduser_"]?></td>
+                <td><?php echo $averia["id_averia"]?></td>
                 <td class="text-left"><?php echo $averia["username"]?></td>
                 <td class="text-left"><?php echo $averia["description"]?></td>
-                <td class="text-left"><?php echo $averia["nombres"]?></td>
+                <td class="text-left"><?php echo $averia["estado"]?></td>
                 <td class="text-left"><?php echo $averia["zona"]?></td>
                 <td class="text-left"><?php 
                 if(empty($averia["finalizado"])){
