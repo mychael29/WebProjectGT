@@ -29,7 +29,7 @@
 <body>
 
 <br>
-
+<?php echo "2 matriz_averias " . $matriz_averias;?>
 <section>
     <div class="container">
       <div class="row">

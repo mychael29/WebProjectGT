@@ -18,6 +18,7 @@ while($filas=$comando2->fetch(PDO::FETCH_ASSOC)){
 }
 
 $matriz_averias = $averias;
+echo "1 matriz_averias " . $matriz_averias;
 
 
     /*
