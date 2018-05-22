@@ -2,7 +2,7 @@
 include('conexion.php');
 echo "error db1";
 
-function getAll($empezar_desde,$tamagno_paginas,$conexion){
+function getAll(){
     echo "error db2 getAll";
     $consulta = "SELECT * FROM averia LIMIT $empezar_desde, $tamagno_paginas";
     try {
@@ -21,7 +21,7 @@ function getAll($empezar_desde,$tamagno_paginas,$conexion){
     }
 }
 
-function cantFilas($conexion){
+function cantFilas(){
     echo "error db2 cantFilas";
     $consulta = "SELECT zona, motivo, estado FROM averia";
     try {
