@@ -33,7 +33,7 @@ function cantFilas(){
     
         // Ejecutar sentencia preparada
         //$comando->execute();
-        return (int)$num_filas;
+        return $num_filas;
     } catch (PDOException $e) {
         return false;
     }

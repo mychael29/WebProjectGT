@@ -2,7 +2,7 @@
 echo "error 1 averias_dbb";
 
 
-include('../db/averias_db.php');
+
 
 //$averias=array();
 //$consulta=$conexion->query("SELECT * FROM averias LIMIT $empezar_desde, $tamagno_paginas");
@@ -34,6 +34,7 @@ $empezar_desde=($pagina-1)*$tamagno_paginas;
 //$sql_total="SELECT username, email, nombres FROM usuarios";
 //$resultado=$conexion->prepare($sql_total);
 //$resultado->execute(array());
+include('../db/averias_db.php');
 echo "error 2";
 $num_filas= cantFilas();
 echo "error 3";
