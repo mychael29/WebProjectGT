@@ -9,7 +9,7 @@ try{
 	die("Error " . $e->getMessage());
 	echo "Linea del error " . $e->getLine();
 }*/
-
+echo "conexion";
 try{
     $conexion = new PDO($host,$usernameserver,$passwordserver);
     $conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
