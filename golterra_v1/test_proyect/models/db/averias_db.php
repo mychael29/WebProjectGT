@@ -2,47 +2,43 @@
 include('conexion.php');
 echo "error db1";
 
-class Averias {
-    function __construct()
-    {
-    }
+function getAll($empezar_desde,$tamagno_paginas,$conexion){
+    echo "error db2 getAll";
+    $consulta = "SELECT * FROM averia LIMIT $empezar_desde, $tamagno_paginas";
+    try {
+        $averias=array();
+        // Preparar sentencia
+        $comando = $conexion->query($consulta);
 
-    public static function getAll($empezar_desde,$tamagno_paginas,$conexion){
-        echo "error db2 getAll";
-        $consulta = "SELECT * FROM averia LIMIT $empezar_desde, $tamagno_paginas";
-        try {
-            $averias=array();
-            // Preparar sentencia
-            $comando = $conexion->query($consulta);
-
-            while($filas=$comando->fetch(PDO::FETCH_ASSOC)){   
-                $averias[]=$filas;
-            }
-            // Ejecutar sentencia preparada
-            //$comando->execute();
-            return $averias;
-        } catch (PDOException $e) {
-            return false;
+        while($filas=$comando->fetch(PDO::FETCH_ASSOC)){   
+            $averias[]=$filas;
         }
+        // Ejecutar sentencia preparada
+        //$comando->execute();
+        return $averias;
+    } catch (PDOException $e) {
+        return false;
     }
+}
 
-    public static function cantFilas($conexion){
-        echo "error db2 cantFilas";
-        $consulta = "SELECT zona, motivo, estado FROM averia";
-        try {
-           
-            // Preparar sentencia
-            $comando = $conexion->prepare($consulta);
-            $comando->execute(array());
-            $num_filas=$comando->rowCount();
-        
-            // Ejecutar sentencia preparada
-            //$comando->execute();
-            return $num_filas;
-        } catch (PDOException $e) {
-            return false;
-        }
+function cantFilas($conexion){
+    echo "error db2 cantFilas";
+    $consulta = "SELECT zona, motivo, estado FROM averia";
+    try {
+       
+        // Preparar sentencia
+        $comando = $conexion->prepare($consulta);
+        $comando->execute(array());
+        $num_filas=$comando->rowCount();
+    
+        // Ejecutar sentencia preparada
+        //$comando->execute();
+        return $num_filas;
+    } catch (PDOException $e) {
+        return false;
     }
+}
+
 
     /*
     public static function update($iduser,$username,$email,$password) {
@@ -84,6 +80,6 @@ class Averias {
         $sentencia = Database::getInstance()->getDb()->prepare($comando);
         return $sentencia->execute(array($iduser));
     }*/
-}
+
 
 ?>

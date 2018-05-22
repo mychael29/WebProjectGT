@@ -35,10 +35,10 @@ $empezar_desde=($pagina-1)*$tamagno_paginas;
 //$resultado=$conexion->prepare($sql_total);
 //$resultado->execute(array());
 echo "error 2";
-$num_filas=Averias::cantFilas($conexion);
+$num_filas= cantFilas($conexion);
 echo "error 3";
 $total_paginas=ceil($num_filas/$tamagno_paginas);
 echo "error 4";
-$averias_all = Averias::getAll($empezar_desde,$tamagno_paginas,$conexion);
+$averias_all = getAll($empezar_desde,$tamagno_paginas,$conexion);
 
 ?>
