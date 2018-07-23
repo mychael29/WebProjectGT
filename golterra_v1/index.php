@@ -9,7 +9,6 @@
 		header("location: index.php");
   }
 */
-exit();
 ?>
 
 <?php 
