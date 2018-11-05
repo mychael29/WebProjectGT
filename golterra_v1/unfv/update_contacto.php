@@ -15,7 +15,8 @@ if(isset($_POST['_id'],$_POST['nombre'],$_POST['alias'],$_POST['telefono'])) {
     $inserted->bindParam(2, $alias, PDO::PARAM_STR); 
     $inserted->bindParam(3, $telefono, PDO::PARAM_STR);
     $inserted->bindParam(4, $id, PDO::PARAM_STR);
+    $inserted->execute();
 
-    echo "Registrado"; 
+    echo "Actualizado"; 
 }
 ?>
