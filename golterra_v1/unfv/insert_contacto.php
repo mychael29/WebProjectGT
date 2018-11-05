@@ -8,15 +8,20 @@ if(isset($_POST['_id'],$_POST['nombre'],$_POST['alias'],$_POST['telefono'])) {
     $telefono = $_POST['telefono'];
     
     //registro
-    $query = "insert into usuarios (_id, nombre, alias, telefono) values (?,?,?,?)";
-    $inserted = $conexion->prepare($query);
+    try {
+        $query = "insert into usuarios (_id, nombre, alias, telefono) values (?,?,?,?)";
+        $inserted = $conexion->prepare($query);
+        
+        $inserted->bindParam(1, $id, PDO::PARAM_STR); 
+        $inserted->bindParam(2, $nombre, PDO::PARAM_STR); 
+        $inserted->bindParam(3, $alias, PDO::PARAM_STR);
+        $inserted->bindParam(4, $telefono, PDO::PARAM_STR);
+        $inserted->execute();
     
-    $inserted->bindParam(1, $id, PDO::PARAM_STR); 
-    $inserted->bindParam(2, $nombre, PDO::PARAM_STR); 
-    $inserted->bindParam(3, $alias, PDO::PARAM_STR);
-    $inserted->bindParam(4, $telefono, PDO::PARAM_STR);
-    $inserted->execute();
-
-    echo "Registrado"; 
+        echo "Registrado"; 
+    }catch(PDOException $e){
+        echo "Error: " . $e->getMessage();
+    }
+    
 }
 ?>
