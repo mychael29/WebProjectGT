@@ -9,7 +9,7 @@ if(isset($_POST['_id'],$_POST['nombre'],$_POST['alias'],$_POST['telefono'])) {
     
     //registro
     try {
-        $query = "insert into usuarios (_id, nombre, alias, telefono) values (?,?,?,?)";
+        $query = "insert into contacto (_id, nombre, alias, telefono) values (?,?,?,?)";
         $inserted = $conexion->prepare($query);
         
         $inserted->bindParam(1, $id, PDO::PARAM_STR); 
