@@ -32,7 +32,7 @@ if(isset($_POST['email'],$_POST['password'])) {
                 $comando->execute(array($email));
                 // Capturar primera fila del resultado
                 $row = $comando->fetch(PDO::FETCH_ASSOC);
-                $json['user'][]=$row;
+                $json['user']=$row;
 
             } catch (PDOException $e) {
                 $json['error'] = 'Exception : '. $e;
@@ -46,7 +46,7 @@ if(isset($_POST['email'],$_POST['password'])) {
             //mysqli_close($this -> conexion);
         }else{
             $json['message'] = 'Las credenciales incorrectas o inexistente';
-            $json['user'][] = array(
+            $json['user'] = array(
                                     'iduser_' => '',
                                     'username' => '',
                                     'email' => '',
