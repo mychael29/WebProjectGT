@@ -12,7 +12,7 @@ try{
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     $consultaEvent=$conexion->query("SELECT * FROM evento_prueba");
-
+    echo "string : ".$evento['id_event'];
     while($evento=$consultaEvent>fetch(PDO::FETCH_ASSOC)){
         $events['info']=$evento;
         $consultaJugador=$conexion->query("SELECT * FROM jugadores_evento WHERE id_evento=".$evento['id_event']);
