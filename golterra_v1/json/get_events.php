@@ -12,7 +12,7 @@ try{
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
     $players=array();
 
-    $consultaJugador=$conexion->query("SELECT * FROM jugadores_evento WHERE id_evento");
+    $consultaJugador=$conexion->query("SELECT * FROM jugadores_evento");
 
     while($jugador=$consultaJugador->fetch(PDO::FETCH_ASSOC)){
         $players[$jugador['id_evento']]=$jugador;
