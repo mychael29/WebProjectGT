@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         foreach ($players as $key2 => $value2) {
             # code...
-            if(strcmp($value1['id_event'], $value2['id_evento'])){
+            if(strcmp($value1['id_event'], $value2['id_evento']) == 0){
                 $json['players'][]=$value2;
             }
 
