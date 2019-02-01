@@ -11,6 +11,7 @@ try{
 
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
     $players=array();
+    $events=array();
 
     $consultaJugador=$conexion->query("SELECT * FROM jugadores_evento");
 
