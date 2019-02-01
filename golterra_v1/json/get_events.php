@@ -18,14 +18,14 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
         //echo "string : ".$evento[]['id_event'];
 
         var_dump[$evento];
-
+        /*
         $events['info']=$evento;
         $consultaJugador=$conexion->query("SELECT * FROM jugadores_evento WHERE id_evento=".$evento['id_event']);
         while($jugador=$consultaJugador>fetch(PDO::FETCH_ASSOC)){
             $events['players'][]=$jugador;
-        }
+        }*/
     }
-    print json_encode($events);
+    //print json_encode($events);
 }
 
 ?>
