@@ -20,6 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
             $events['players'][]=$jugador;
         }
     }
+    echo "jjj";
     print json_encode($events);
 }
 
