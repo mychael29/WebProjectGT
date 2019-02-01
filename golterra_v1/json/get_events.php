@@ -33,6 +33,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         }
         $events[]=$json;
+        $json=null;
     }
     /*
     //echo "string : ".$evento['id_event'];
