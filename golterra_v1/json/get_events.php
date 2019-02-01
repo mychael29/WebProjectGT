@@ -13,13 +13,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     $players=array();
     $events=array();
 
-    $consultaJugador=$conexion->query("SELECT * FROM jugadores_evento");
+    $consultaJugador=$conexion->prepare("SELECT * FROM jugadores_evento");
     $consultaJugador->execute();
-    $players=$consultaJugador->fetchAll();
+    $players=$consultaJugador->fetchAll(PDO::FETCH_ASSOC);
 
-    $consultaEvent=$conexion->query("SELECT * FROM evento_prueba");
+    $consultaEvent=$conexion->prepare("SELECT * FROM evento_prueba");
     $consultaEvent->execute();
-    $eventsItems=$consultaEvent->fetchAll();
+    $eventsItems=$consultaEvent->fetchAll(PDO::FETCH_ASSOC);
 
     foreach ($eventsItems as $key1 => $value1) {
         # code...
