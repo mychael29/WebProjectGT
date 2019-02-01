@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     $consultaJugador=$conexion->query("SELECT * FROM jugadores_evento");
 
     while($jugador=$consultaJugador->fetch(PDO::FETCH_ASSOC)){
-        $players[$jugador['id_evento']]=$jugador;
+        $players[]=$jugador;
     }
 
     $consultaEvent=$conexion->query("SELECT * FROM evento_prueba");
@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
         $events['info']=$evento;
 
         foreach ($players as $key => $value) {
-            if($evento['id_event']=$key){
+            if($evento['id_event']=$value['id_evento']){
                 $events['players'][]=$value;
             }
         }
