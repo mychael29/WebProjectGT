@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     //echo "string : ".$evento['id_event'];
     while($evento=$consultaEvent>fetch(PDO::FETCH_ASSOC)){
-        echo "string : ".$evento['id_event'];
+        //echo "string : ".$evento[]['id_event'];
 
         var_dump[$evento];
 
