@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         foreach ($players as $key => $value) {
             if($evento['id_event']=$value['id_evento']){
-                $events[$evento['id_event']]['players']=$value;
+                $events[$evento['id_event']]['info']['players']=$value;
             }
         }
 
