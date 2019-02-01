@@ -10,6 +10,13 @@ try{
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'GET') {
+    $players=array();
+
+    $consultaJugador=$conexion->query("SELECT * FROM jugadores_evento WHERE id_evento");
+
+    while($jugador=$consultaJugador->fetch(PDO::FETCH_ASSOC)){
+        $players[$jugador['id_evento']]=$jugador;
+    }
 
     $consultaEvent=$conexion->query("SELECT * FROM evento_prueba");
 
@@ -20,10 +27,13 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
         //var_dump[$evento];
 
         $events['info']=$evento;
-        $consultaJugador=$conexion->query("SELECT * FROM jugadores_evento WHERE id_evento=".$evento['id_event']);
-        while($jugador=$consultaJugador->fetch(PDO::FETCH_ASSOC)){
-            $events['players'][]=$jugador;
+
+        foreach ($players as $key => $value) {
+            if($evento['id_event']=$key){
+                $events['players'][]=$value;
+            }
         }
+
     }
     print json_encode($events);
 }
