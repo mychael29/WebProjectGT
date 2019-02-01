@@ -14,13 +14,26 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
     $events=array();
 
     $consultaJugador=$conexion->query("SELECT * FROM jugadores_evento");
-
-    while($jugador=$consultaJugador->fetch(PDO::FETCH_ASSOC)){
-        $players[]=$jugador;
-    }
+    $consultaJugador->execute();
+    $players=$consultaJugador->fetchAll();
 
     $consultaEvent=$conexion->query("SELECT * FROM evento_prueba");
+    $consultaEvent->execute();
+    $eventsItems=$consultaEvent->fetchAll();
 
+    foreach ($eventsItems as $key1 => $value1) {
+        # code...
+        $json['info']=$value;
+
+        foreach ($players as $key2 => $value2) {
+            # code...
+            if($value1['id_event']=$value2['id_evento']){
+                $json['players'][]=$value2;
+            }
+        }
+        $events[]=$json;
+    }
+    /*
     //echo "string : ".$evento['id_event'];
     while($evento=$consultaEvent->fetch(PDO::FETCH_ASSOC)){
         //echo "string : ".$evento[]['id_event'];
@@ -36,7 +49,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
         }
         $events[]=$json;
 
-    }
+    }*/
     print json_encode($events);
 }
 
