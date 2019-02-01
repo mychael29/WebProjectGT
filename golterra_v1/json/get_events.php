@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     foreach ($eventsItems as $key1 => $value1) {
         # code...
-        $json['info']=$value;
+        $json['info']=$value1;
 
         foreach ($players as $key2 => $value2) {
             # code...
