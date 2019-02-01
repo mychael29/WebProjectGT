@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         //var_dump[$evento];
 
-        $events['info']=$evento;
+        $events[]['info']=$evento;
 
 /*
         foreach ($players as $key => $value) {
