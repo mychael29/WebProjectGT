@@ -26,14 +26,15 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
         //echo "string : ".$evento[]['id_event'];
 
         //var_dump[$evento];
-
-        $events[$evento['id_event']]['info']=$evento;
+        $json['info']=$evento;
+        //$events[]['info']=$evento;
 
         foreach ($players as $key => $value) {
             if($evento['id_event']=$value['id_evento']){
-                $events[$evento['id_event']]['info']['players']=$value;
+                $json['players'][]=$value;
             }
         }
+        $events[]=$json;
 
     }
     print json_encode($events);
