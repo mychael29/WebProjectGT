@@ -28,11 +28,12 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
 
         $events['info']=$evento;
 
+/*
         foreach ($players as $key => $value) {
             if($evento['id_event']=$value['id_evento']){
                 $events['players'][]=$value;
             }
-        }
+        }¨*/
 
     }
     print json_encode($events);
