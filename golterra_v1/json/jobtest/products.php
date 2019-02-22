@@ -2,14 +2,14 @@
    "products":[
          {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
-            
+            "UsesColor":[
+
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -17,10 +17,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -35,17 +35,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -53,10 +53,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -71,17 +71,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -89,10 +89,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -107,17 +107,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -125,10 +125,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -143,17 +143,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -161,10 +161,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -179,17 +179,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -197,10 +197,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -215,18 +215,18 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
 
                {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -234,10 +234,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -252,17 +252,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -270,10 +270,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -288,17 +288,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -306,10 +306,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -324,17 +324,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -342,10 +342,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -360,17 +360,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -378,10 +378,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -396,17 +396,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -414,10 +414,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -432,17 +432,17 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
+        },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -450,10 +450,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -468,18 +468,18 @@
             "subNamePants":"none",
             "subNameShirt":"none",
             "wholesalePrice":30.0
-        }, 
-        
+        },
+
         {
             "id":"1U3cW86e6xcJWeFsnqEW",
-            "type":1,
+            "type":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
-            "UsesColor":[  
+            "UsesColor":[
 
             ],
-            "colorList":[  
+            "colorList":[
                "azul",
                "verde",
                "negro",
@@ -487,10 +487,10 @@
             ],
             "description":"vestido verano",
             "discount":10,
-            "imageList":[  
+            "imageList":[
                "https://firebasestorage.googleapis.com/v0/b/bukuri-4ee3b.appspot.com/o/products%2Fimg-min.jpeg?alt\u003dmedia\u0026token\u003d128b7f45-e199-48ee-a557-61b70333c6d8"
             ],
-            "size":[  
+            "size":[
                "medium",
                "small"
             ],
@@ -506,5 +506,5 @@
             "subNameShirt":"none",
             "wholesalePrice":30.0
         }
-      ] 
+      ]
 }
