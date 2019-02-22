@@ -2,7 +2,7 @@
    "products":[
          {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -38,7 +38,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -74,7 +74,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -110,7 +110,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -146,7 +146,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -182,7 +182,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -219,7 +219,7 @@
 
                {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -255,7 +255,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -291,7 +291,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -327,7 +327,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -363,7 +363,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -399,7 +399,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -435,7 +435,7 @@
         },
                  {
             "id":"1U3OW86E6xBJWeFOn2EW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
@@ -472,7 +472,7 @@
 
         {
             "id":"1U3cW86e6xcJWeFsnqEW",
-            "type":[{"id":1},{"name":"casual"}],
+            "TypeDataModel":[{"id":1},{"name":"casual"}],
             "category":5,
             "typeClothing":2,
 
