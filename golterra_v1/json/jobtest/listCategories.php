@@ -2,64 +2,52 @@
     "categories":[
     {
         "id": 1,
-        "categoryName": "Ropa",
-        "imageUrl": "ruta"
+        "name": "Ropa",
     },
     {
         "id": 2,
-        "categoryName": "Camisas",
-        "imageUrl": "ruta"
+        "name": "Camisas",
     },
     {
         "id": 3,
-        "categoryName": "Playeros",
-        "imageUrl": "ruta"
+        "name": "Playeros",
     },
     {
        "id": 4,
-        "categoryName": "Poleras",
-        "imageUrl": "ruta"
+        "name": "Poleras",
     },
     {
         "id": 5,
-        "categoryName": "Trajes de noche",
-        "imageUrl": "ruta"
+        "name": "Trajes de noche",
     },
     {
         "id": 6,
-        "categoryName": "Trajes Playeros noche",
-        "imageUrl": "ruta"
+        "name": "Trajes Playeros noche",
     },
     {
         "id": 7,
-        "categoryName": "Trajes de noche",
-        "imageUrl": "ruta"
+        "name": "Trajes de noche",
     },
     {
         "id": 8,
-        "categoryName": "Polos",
-        "imageUrl": "ruta"
+        "name": "Polos",
     },
     {
         "id": 9,
-        "categoryName": "Ternos",
-        "imageUrl": "ruta"
+        "name": "Ternos",
     },
 
     {
         "id": 10,
-        "categoryName": "Camisas",
-        "imageUrl": "ruta"
+        "name": "Camisas",
     },
     {
         "id": 11,
-        "categoryName": "Interior",
-        "imageUrl": "ruta"
+        "name": "Interior",
     },
     {
         "id": 11,
-        "categoryName": "Interior",
-        "imageUrl": "ruta"
+        "name": "Interior",
     }
- ]      
+ ]
 }
