@@ -2,52 +2,52 @@
     "categories":[
     {
         "id": 1,
-        "name": "Ropa",
+        "name": "Ropa"
     },
     {
         "id": 2,
-        "name": "Camisas",
+        "name": "Camisas"
     },
     {
         "id": 3,
-        "name": "Playeros",
+        "name": "Playeros"
     },
     {
        "id": 4,
-        "name": "Poleras",
+        "name": "Poleras"
     },
     {
         "id": 5,
-        "name": "Trajes de noche",
+        "name": "Trajes de noche"
     },
     {
         "id": 6,
-        "name": "Trajes Playeros noche",
+        "name": "Trajes Playeros noche"
     },
     {
         "id": 7,
-        "name": "Trajes de noche",
+        "name": "Trajes de noche"
     },
     {
         "id": 8,
-        "name": "Polos",
+        "name": "Polos"
     },
     {
         "id": 9,
-        "name": "Ternos",
+        "name": "Ternos"
     },
 
     {
         "id": 10,
-        "name": "Camisas",
+        "name": "Camisas"
     },
     {
         "id": 11,
-        "name": "Interior",
+        "name": "Interior"
     },
     {
         "id": 11,
-        "name": "Interior",
+        "name": "Interior"
     }
  ]
 }
